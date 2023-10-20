@@ -13,4 +13,11 @@ public class LoginAPI {
 
     }
 
+    public static Login loginBuilder(String email,String password){
+        return Login.builder().
+                email(email).
+                password(password).
+                build();
+    }
+
 }

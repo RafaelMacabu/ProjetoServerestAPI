@@ -28,7 +28,7 @@ public class RestResource {
     }
 
 
-    public static Response get(String path,String token){
+    public static Response get(String path){
         return given(getReqSpec()).
                 when().
                 get(path).
@@ -37,7 +37,7 @@ public class RestResource {
 
     }
 
-    public static Response put(String path,String token,Object requestPlaylist){
+    public static Response put(String path,Object requestPlaylist){
         return given(getReqSpec()).
                 body(requestPlaylist).
                 when().
