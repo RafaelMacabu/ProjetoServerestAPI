@@ -31,7 +31,14 @@ public class LoginTest {
 
         Response response = UsuariosAPI.get();
         Usuarios responseUsuarios = response.as(Usuarios.class);
-        Assert.assertTrue(responseUsuarios.getUsuarios().contains("Rafael Macabu"));
+        String nome = "";
+        for (Usuarios usuarios: responseUsuarios.getUsuarios()) {
+            if (usuarios.getNome().equals("Rafael Macabu")){
+                nome = usuarios.getNome();
+            }
+        }
+        Assert.assertEquals(nome,"Rafael Macabu");
+        System.out.println(nome);
 
     }
 
