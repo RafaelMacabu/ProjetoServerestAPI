@@ -16,7 +16,6 @@ import java.util.List;
 @Builder
 @Jacksonized
 public class Usuario {
-
     @JsonProperty("email")
     private String email;
     @JsonProperty("password")
@@ -29,6 +28,4 @@ public class Usuario {
     private String id;
     @JsonProperty("message")
     private String message;
-
-
 }

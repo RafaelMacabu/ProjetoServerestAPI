@@ -8,12 +8,11 @@ import static dev.serverest.api.Route.LOGIN;
 
 public class LoginAPI {
 
-    public static Response post(Login requestLogin){
-        return RestResource.post(LOGIN,requestLogin);
-
+    public static Response post(Login requestLogin) {
+        return RestResource.post(LOGIN, requestLogin);
     }
 
-    public static Login loginBuilder(String email,String password){
+    public static Login loginBuilder(String email, String password) {
         return Login.builder().
                 email(email).
                 password(password).

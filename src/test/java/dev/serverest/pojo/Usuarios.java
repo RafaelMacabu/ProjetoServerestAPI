@@ -10,18 +10,14 @@ import lombok.extern.jackson.Jacksonized;
 import java.util.List;
 
 
-
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Getter
 @Setter
 @Builder
 @Jacksonized
 public class Usuarios {
-
     @JsonProperty("quantidade")
     private int quantidade;
     @JsonProperty("usuarios")
     private List<Usuario> usuarios;
-
-
 }

@@ -8,8 +8,7 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
 public class SpecBuilder {
-
-    public static RequestSpecification getReqSpec(){
+    public static RequestSpecification getReqSpec() {
         return new RequestSpecBuilder().
                 setBaseUri("https://serverest.dev").
                 setContentType(ContentType.JSON).
@@ -17,7 +16,7 @@ public class SpecBuilder {
                 build();
     }
 
-    public static ResponseSpecification getRespSpec(){
+    public static ResponseSpecification getRespSpec() {
         return new ResponseSpecBuilder().
                 expectContentType(ContentType.JSON).
                 log(LogDetail.ALL).

@@ -7,8 +7,7 @@ import static dev.serverest.api.SpecBuilder.getRespSpec;
 import static io.restassured.RestAssured.given;
 
 public class RestResource {
-
-    public static Response post(String path,Object requestPlaylist){
+    public static Response post(String path, Object requestPlaylist) {
         return given(getReqSpec()).
                 body(requestPlaylist).
                 when().
@@ -17,18 +16,17 @@ public class RestResource {
                 extract().response();
     }
 
-    public static Response post(String path,String bearerToken,Object requestPlaylist){
+    public static Response post(String path, String bearerToken, Object requestPlaylist) {
         return given(getReqSpec()).
                 body(requestPlaylist).
-                header("Authorization","Bearer " + bearerToken).
+                header("Authorization", "Bearer " + bearerToken).
                 when().
                 post(path).
                 then().spec(getRespSpec()).
                 extract().response();
     }
 
-
-    public static Response get(String path){
+    public static Response get(String path) {
         return given(getReqSpec()).
                 when().
                 get(path).
@@ -37,7 +35,7 @@ public class RestResource {
 
     }
 
-    public static Response put(String path,Object requestPlaylist){
+    public static Response put(String path, Object requestPlaylist) {
         return given(getReqSpec()).
                 body(requestPlaylist).
                 when().

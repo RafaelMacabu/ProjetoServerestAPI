@@ -13,7 +13,6 @@ import lombok.extern.jackson.Jacksonized;
 @Builder
 @Jacksonized
 public class Login {
-
     @JsonProperty("email")
     private String email;
     @JsonProperty("password")
@@ -22,6 +21,4 @@ public class Login {
     private String message;
     @JsonProperty("authorization")
     private String authorization;
-
-
 }

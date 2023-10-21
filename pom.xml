@@ -84,13 +84,5 @@
             <artifactId>cucumber-testng</artifactId>
             <version>7.14.0</version>
         </dependency>
-
-
-
-
-
-
-
     </dependencies>
-
 </project>
