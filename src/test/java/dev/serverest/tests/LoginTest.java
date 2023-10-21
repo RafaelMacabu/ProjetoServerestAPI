@@ -3,23 +3,22 @@ package dev.serverest.tests;
 import dev.serverest.api.applicationAPI.LoginAPI;
 import dev.serverest.api.applicationAPI.UsuariosAPI;
 import dev.serverest.pojo.Login;
+import dev.serverest.pojo.Usuario;
 import dev.serverest.pojo.Usuarios;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.List;
-
 import static dev.serverest.api.applicationAPI.LoginAPI.loginBuilder;
+import static dev.serverest.api.applicationAPI.UsuariosAPI.assertNameThroughUserList;
 import static dev.serverest.api.applicationAPI.UsuariosAPI.usuariosBuilder;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
 
 public class LoginTest {
 
     @Test
     public void UsuariosPost(){
-        Usuarios requestUsuarios = usuariosBuilder("Rafael Macabu","raffe@qa.com.br","raff","true");
+        Usuario requestUsuarios = usuariosBuilder("Rafael Macabu","raffe@qa.com.br","raff","true");
 
         Response response = UsuariosAPI.post(requestUsuarios);
         Assert.assertEquals(response.statusCode(),201);
@@ -28,17 +27,9 @@ public class LoginTest {
 
     @Test
     public void UsuariosGet(){
-
         Response response = UsuariosAPI.get();
         Usuarios responseUsuarios = response.as(Usuarios.class);
-        String nome = "";
-        for (Usuarios usuarios: responseUsuarios.getUsuarios()) {
-            if (usuarios.getNome().equals("Rafael Macabu")){
-                nome = usuarios.getNome();
-            }
-        }
-        Assert.assertEquals(nome,"Rafael Macabu");
-        System.out.println(nome);
+        assertNameThroughUserList("Rafael Macabu",responseUsuarios);
 
     }
 
