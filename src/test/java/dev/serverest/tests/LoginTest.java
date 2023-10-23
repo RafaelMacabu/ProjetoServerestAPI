@@ -32,6 +32,14 @@ public class LoginTest {
     }
 
     @Test
+    public void UsuariosDelete(){
+        String userId = "";
+        Response response = UsuariosAPI.delete(userId);
+        Usuario responseUsuarios = response.as(Usuario.class);
+        Assert.assertEquals(responseUsuarios.getMessage(),"Registro excluído com sucesso");
+    }
+
+    @Test
     public void Login() {
         Login requestLogin = loginBuilder("raffe@qa.com.br", "raff");
 

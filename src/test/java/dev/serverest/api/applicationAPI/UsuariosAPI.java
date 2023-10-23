@@ -16,8 +16,12 @@ public class UsuariosAPI {
         return RestResource.get(USUARIOS);
     }
 
-    public static Response post(Usuario requestLogin) {
-        return RestResource.post(USUARIOS, requestLogin);
+    public static Response post(Usuario requestUsuario) {
+        return RestResource.post(USUARIOS, requestUsuario);
+    }
+
+    public static Response delete(String userId){
+        return RestResource.delete(USUARIOS + "/" + userId);
     }
 
     public static Usuario usuariosBuilder(String nome, String email, String password, String administrador) {
@@ -36,12 +40,16 @@ public class UsuariosAPI {
                 name = usuarios.getNome();
             }
         }*/
-        String name = responseUsuarios.getUsuarios().
-                stream().
-                filter(e -> e.getNome().equals(nome)).
-                collect(Collectors.toList())
-                .get(0).getNome();
-
-        Assert.assertEquals(name, nome);
+        try{
+            String name = responseUsuarios.getUsuarios().
+                    stream().
+                    filter(e -> e.getNome().equals(nome)).
+                    collect(Collectors.toList())
+                    .get(0).getNome();
+            Assert.assertEquals(name, nome);
+        }catch (IndexOutOfBoundsException exception){
+            System.out.println("Usuário não encontrado");
+            Assert.fail();
+        }
     }
 }

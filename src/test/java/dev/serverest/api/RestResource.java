@@ -35,11 +35,19 @@ public class RestResource {
 
     }
 
-    public static Response put(String path, Object requestPlaylist) {
+    public static Response put(String path, Object request) {
         return given(getReqSpec()).
-                body(requestPlaylist).
+                body(request).
                 when().
                 put(path).
+                then().
+                extract().response();
+    }
+
+    public static Response delete(String path) {
+        return given(getReqSpec()).
+                when().
+                delete(path).
                 then().
                 extract().response();
     }
