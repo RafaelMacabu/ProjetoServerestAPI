@@ -24,6 +24,10 @@ public class UsuariosAPI {
         return RestResource.delete(USUARIOS + "/" + userId);
     }
 
+    public static Response put(Usuario requestUsuario,String userId){
+        return RestResource.put(USUARIOS + "/" + userId,requestUsuario);
+    }
+
     public static Usuario usuariosBuilder(String nome, String email, String password, String administrador) {
         return Usuario.builder().
                 nome(nome).

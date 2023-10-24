@@ -40,6 +40,15 @@ public class LoginTest {
     }
 
     @Test
+    public void UsuariosPut(){
+        String userId = "9JRpwLureDpKp309";
+        Usuario requestUsuarios =
+                usuariosBuilder("Rafael Macabu", "raffe@qa.com.br", "raff", "true");
+        Response response = UsuariosAPI.put(requestUsuarios,userId);
+        Usuario responseUsuarios = response.as(Usuario.class);
+        Assert.assertEquals(responseUsuarios.getMessage(),"Registro alterado com sucesso");
+    }
+    @Test
     public void Login() {
         Login requestLogin = loginBuilder("raffe@qa.com.br", "raff");
 
