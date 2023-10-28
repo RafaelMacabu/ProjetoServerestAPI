@@ -37,7 +37,7 @@ public class UsuariosAPI {
                 build();
     }
 
-    public static void assertNameThroughUserList(String nome, Usuarios responseUsuarios) {
+    public static void assertNameThroughUserList(String usuarioNome, Usuarios responseUsuarios) {
         //String name= "";
         /*for (Usuarios usuarios: responseUsuarios.getUsuarios()) {
             if (usuarios.getNome().equals(nome)){
@@ -45,12 +45,13 @@ public class UsuariosAPI {
             }
         }*/
         try{
-            String name = responseUsuarios.getUsuarios().
+            Usuario usuario = responseUsuarios.getUsuarios().
                     stream().
-                    filter(e -> e.getNome().equals(nome)).
+                    filter(e -> e.getNome().equals(usuarioNome)).
                     collect(Collectors.toList())
-                    .get(0).getNome();
-            Assert.assertEquals(name, nome);
+                    .get(0);
+            System.out.println(usuario.getNome());
+            Assert.assertEquals(usuario.getNome(), usuarioNome);
         }catch (IndexOutOfBoundsException exception){
             System.out.println("Usuário não encontrado");
             Assert.fail();
