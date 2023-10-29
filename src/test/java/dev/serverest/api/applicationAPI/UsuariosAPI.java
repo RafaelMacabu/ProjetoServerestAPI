@@ -50,7 +50,7 @@ public class UsuariosAPI {
                     filter(e -> e.getNome().equals(usuarioNome)).
                     collect(Collectors.toList())
                     .get(0);
-            System.out.println(usuario.getNome());
+            System.out.println(usuario.getId());
             Assert.assertEquals(usuario.getNome(), usuarioNome);
         }catch (IndexOutOfBoundsException exception){
             System.out.println("Usuário não encontrado");

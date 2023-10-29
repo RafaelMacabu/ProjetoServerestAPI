@@ -19,7 +19,7 @@ public class RestResource {
     public static Response post(String path, String bearerToken, Object request) {
         return given(getReqSpec()).
                 body(request).
-                header("Authorization", "Bearer " + bearerToken).
+                header("Authorization",bearerToken).
                 when().
                 post(path).
                 then().spec(getRespSpec()).

@@ -34,7 +34,7 @@ public class LoginTest {
 
     @Test
     public void UsuariosDelete(){
-        String userId = "";
+        String userId = "5nepsDr60dpDcmgk";
         Response response = UsuariosAPI.delete(userId);
         Usuario responseUsuarios = response.as(Usuario.class);
         Assert.assertEquals(responseUsuarios.getMessage(),"Registro excluído com sucesso");
@@ -71,8 +71,10 @@ public class LoginTest {
 
     @Test
     public void ProdutosPost(){
-        Produto requestProduto = produtoBuilder("bosta",666.00,"fede",2);
-        Response response = ProdutosAPI.post(requestProduto,"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhZmZlQHFhLmNvbS5iciIsInBhc3N3b3JkIjoicmFmZiIsImlhdCI6MTY5ODQ1NjQ5NSwiZXhwIjoxNjk4NDU3MDk1fQ.oeyGqgZrhNF_-ZSsfgfhyOpFjgGtLlMQHrWU8tLEtAE");
+        Produto requestProduto = produtoBuilder("bostaaa",666.00,"fede",2);
+        Usuario requestUsuarios =
+                usuariosBuilder("Rafael Macabuuuii", "raffeeiie@qa.com.br", "raff", "true");
+        Response response = ProdutosAPI.post(requestProduto,requestUsuarios);
         Produto produto = response.as(Produto.class);
         Assert.assertEquals(produto.getMessage(),"Cadastro realizado com sucesso");
     }
