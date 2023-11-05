@@ -10,6 +10,7 @@ import org.testng.Assert;
 import java.util.stream.Collectors;
 
 import static dev.serverest.api.Route.USUARIOS;
+import static dev.serverest.utils.FakerUtils.*;
 
 public class UsuariosAPI {
     public static Response get() {
@@ -34,6 +35,26 @@ public class UsuariosAPI {
                 email(email).
                 password(password).
                 administrador(administrador).
+                build();
+    }
+
+    public static Usuario generateRandomUser(){
+        String nome = generateName();
+        return Usuario.builder().
+                nome(nome).
+                password(generatePassword()).
+                email(generateEmail(nome.replace(" ",""))).
+                administrador("true").
+                build();
+    }
+
+    public static Usuario generateRandomUser(String admin){
+        String nome = generateName();
+        return Usuario.builder().
+                nome(nome).
+                password(generatePassword()).
+                email(generateEmail(nome.replace(" ",""))).
+                administrador(admin).
                 build();
     }
 

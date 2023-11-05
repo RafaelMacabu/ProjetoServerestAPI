@@ -12,4 +12,11 @@ Funcionalidade: Cenarios de teste de usuarios
     Quando eu fizer um POST na API de cadastro
     Entao o status code será 201
 
+  Cenario: Editando uma conta já criada
+    Dado tenho uma conta já cadastrada
+    Quando eu fizer um PUT na API de cadastro
+    Entao o status code será 200
+
+
+
 
