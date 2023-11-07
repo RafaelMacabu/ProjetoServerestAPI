@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="10" failures="8" name="TestSuite" time="10.206" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="15.0.2+7-27"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15.0.2\bin"/>
+    <property name="user.country.format" value="CV"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:/Users/Rafael/IdeaProjects/ProjetoServerestAPI"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\Rafael\IdeaProjects\ProjetoServerestAPI"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="15.0.2+7-27"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\Rafael\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:/Maven/apache-maven-3.8.6/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-15.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\Git\mingw64\bin;D:\Git\usr\bin;C:\Users\Rafael\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\dotnet;C:\Maven\apache-maven-3.8.6;C:\Maven\apache-maven-3.8.6\bin;C:\Program Files\Java\jdk-15.0.2\bin;C:\Users\Rafael\Documents\Drivers;D:\Git\cmd;C:\Program Files\nodejs;D:\Android\Sdk\platform-tools;D:\Android\Sdk\cmdline-tools;C:\Users\Rafael\scoop\shims;C:\Users\Rafael\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.1\bin;C:\Users\Rafael\AppData\Roaming\npm;."/>
+    <property name="maven.conf" value="C:/Maven/apache-maven-3.8.6/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="59.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:/Maven/apache-maven-3.8.6/lib/jansi-native"/>
+    <property name="user.home" value="C:\Users\Rafael"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.specification.version" value="15"/>
+    <property name="user.name" value="Rafael"/>
+    <property name="java.class.path" value="C:/Maven/apache-maven-3.8.6/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="15"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-15.0.2"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="15.0.2"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="sun.stderr.encoding" value="cp437"/>
+    <property name="maven.home" value="C:\Maven\apache-maven-3.8.6"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2021-01-19"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.stdout.encoding" value="cp437"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="dev.serverest.runners.TestNGRunner" name="scenario" time="4.485">
+    <failure message="The step &apos;o status code será 201&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Entao(&quot;o status code será {int}&quot;)
+public void oStatusCodeSerá(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+" type="io.cucumber.testng.UndefinedStepException">io.cucumber.testng.UndefinedStepException: The step &apos;o status code será 201&apos; is undefined.
+You can implement this step using the snippet(s) below:
+@Entao(&quot;o status code será {int}&quot;)
+public void oStatusCodeSerá(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at dev.serverest.runners.TestNGRunner.scenario(TestNGRunner.java:31)
+</failure>
+    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@2344fc66
+
+@Test @CriandoUsuario
+Cenario: Criando uma conta normal            # src/test/java/dev/serverest/features/UsuariosAPI.feature:6
+  Dado que quero criar um usuario normal     # dev.serverest.stepdef.UsuarioStepDef.que_Quero_Criar_Um_Usuario(java.lang.String)
+Request method:	POST
+Request URI:	https://serverest.dev/usuarios
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;KléberHernandes032@qa.com&quot;,
+    &quot;password&quot;: &quot;8x1n1q3u&quot;,
+    &quot;nome&quot;: &quot;Kléber Hernandes&quot;,
+    &quot;administrador&quot;: &quot;false&quot;
+}
+HTTP/1.1 201 Created
+access-control-allow-origin: *
+x-dns-prefetch-control: off
+x-frame-options: SAMEORIGIN
+strict-transport-security: max-age=15552000; includeSubDomains
+x-download-options: noopen
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+content-type: application/json; charset=utf-8
+X-Cloud-Trace-Context: a60b2433167f713abca1e1a7bba458ff;o=1
+Date: Tue, 07 Nov 2023 05:39:09 GMT
+Server: Google Frontend
+Content-Length: 82
+
+{
+    &quot;message&quot;: &quot;Cadastro realizado com sucesso&quot;,
+    &quot;_id&quot;: &quot;EIrwABl1NZu7SMeW&quot;
+}
+  Quando eu fizer um POST na API de cadastro # dev.serverest.stepdef.UsuarioStepDef.eu_fizer_um_POST_na_API_de_cadastro()
+  Entao o status code serÃ¡ 201
+</system-out>
+    <system-err>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+</system-err>
+  </testcase>
+  <testcase classname="dev.serverest.runners.TestNGRunner" name="scenario" time="0.505">
+    <failure message="The step &apos;o status code será 201&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Entao(&quot;o status code será {int}&quot;)
+public void oStatusCodeSerá(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+" type="io.cucumber.testng.UndefinedStepException">io.cucumber.testng.UndefinedStepException: The step &apos;o status code será 201&apos; is undefined.
+You can implement this step using the snippet(s) below:
+@Entao(&quot;o status code será {int}&quot;)
+public void oStatusCodeSerá(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at dev.serverest.runners.TestNGRunner.scenario(TestNGRunner.java:31)
+</failure>
+    <system-out>
+@Test @CriandoUsuario
+Cenario: Criando uma conta admin             # src/test/java/dev/serverest/features/UsuariosAPI.feature:12
+  Dado que quero criar um usuario admin      # dev.serverest.stepdef.UsuarioStepDef.que_Quero_Criar_Um_Usuario(java.lang.String)
+Request method:	POST
+Request URI:	https://serverest.dev/usuarios
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;MirellaPassarinho261@qa.com&quot;,
+    &quot;password&quot;: &quot;6o4a6g1n&quot;,
+    &quot;nome&quot;: &quot;Mirella Passarinho&quot;,
+    &quot;administrador&quot;: &quot;true&quot;
+}
+HTTP/1.1 201 Created
+access-control-allow-origin: *
+x-dns-prefetch-control: off
+x-frame-options: SAMEORIGIN
+strict-transport-security: max-age=15552000; includeSubDomains
+x-download-options: noopen
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+content-type: application/json; charset=utf-8
+X-Cloud-Trace-Context: af69052f521f20b782ec314c35df06af
+Date: Tue, 07 Nov 2023 05:39:10 GMT
+Server: Google Frontend
+Content-Length: 82
+
+{
+    &quot;message&quot;: &quot;Cadastro realizado com sucesso&quot;,
+    &quot;_id&quot;: &quot;kC7p8rrNT2O4dcTS&quot;
+}
+  Quando eu fizer um POST na API de cadastro # dev.serverest.stepdef.UsuarioStepDef.eu_fizer_um_POST_na_API_de_cadastro()
+  Entao o status code serÃ¡ 201
+</system-out>
+  </testcase>
+  <testcase classname="dev.serverest.runners.TestNGRunner" name="scenario" time="0.003">
+    <failure message="The step &apos;tenho uma conta já cadastrada&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Dado(&quot;tenho uma conta já cadastrada&quot;)
+public void tenhoUmaContaJáCadastrada() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Entao(&quot;o status code será {int}&quot;)
+public void oStatusCodeSerá(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+" type="io.cucumber.testng.UndefinedStepException">io.cucumber.testng.UndefinedStepException: The step &apos;tenho uma conta já cadastrada&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+@Dado(&quot;tenho uma conta já cadastrada&quot;)
+public void tenhoUmaContaJáCadastrada() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Entao(&quot;o status code será {int}&quot;)
+public void oStatusCodeSerá(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at dev.serverest.runners.TestNGRunner.scenario(TestNGRunner.java:31)
+</failure>
+    <system-out>
+@Test @CriandoUsuario
+Cenario: Editando uma conta jÃ¡ criada       # src/test/java/dev/serverest/features/UsuariosAPI.feature:18
+  Dado tenho uma conta jÃ¡ cadastrada
+  Quando eu fizer um PUT na API de cadastro # dev.serverest.stepdef.UsuarioStepDef.eu_Fizer_Um_PUT_Na_API_De_Cadastro()
+  Entao o status code serÃ¡ 200
+</system-out>
+  </testcase>
+  <testcase classname="dev.serverest.tests.LoginTest" name="Login" time="0.35">
+    <failure message="expected [200] but found [401]" type="java.lang.AssertionError">java.lang.AssertionError: expected [200] but found [401]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at org.testng.Assert.assertEquals(Assert.java:1429)
+	at dev.serverest.tests.LoginTest.Login(LoginTest.java:57)
+</failure>
+    <system-out>
+Undefined scenarios:
+file:///C:/Users/Rafael/IdeaProjects/ProjetoServerestAPI/src/test/java/dev/serverest/features/UsuariosAPI.feature:6 # Criando uma conta normal
+file:///C:/Users/Rafael/IdeaProjects/ProjetoServerestAPI/src/test/java/dev/serverest/features/UsuariosAPI.feature:12 # Criando uma conta admin
+file:///C:/Users/Rafael/IdeaProjects/ProjetoServerestAPI/src/test/java/dev/serverest/features/UsuariosAPI.feature:18 # Editando uma conta já criada
+
+3 Scenarios (3 undefined)
+9 Steps (2 skipped, 3 undefined, 4 passed)
+0m5,124s
+
+
+You can implement missing steps with the snippets below:
+
+@Entao(&quot;o status code será {int}&quot;)
+public void oStatusCodeSerá(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+@Dado(&quot;tenho uma conta já cadastrada&quot;)
+public void tenhoUmaContaJáCadastrada() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Request method:	POST
+Request URI:	https://serverest.dev/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;raffe@qa.com.br&quot;,
+    &quot;password&quot;: &quot;raff&quot;
+}
+HTTP/1.1 401 Unauthorized
+access-control-allow-origin: *
+x-dns-prefetch-control: off
+x-frame-options: SAMEORIGIN
+strict-transport-security: max-age=15552000; includeSubDomains
+x-download-options: noopen
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+content-type: application/json; charset=utf-8
+X-Cloud-Trace-Context: d370670e4b5a6d491fc41fe712a1c958
+Date: Tue, 07 Nov 2023 05:39:10 GMT
+Server: Google Frontend
+Content-Length: 48
+
+{
+    &quot;message&quot;: &quot;Email e/ou senha inválidos&quot;
+}
+</system-out>
+  </testcase>
+  <testcase classname="dev.serverest.tests.LoginTest" name="ProdutosGet" time="0.423">
+    <failure type="java.lang.AssertionError:">java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.fail(Assert.java:116)
+	at dev.serverest.api.applicationAPI.ProdutosAPI.assertProductNameThroughList(ProdutosAPI.java:49)
+	at dev.serverest.tests.LoginTest.ProdutosGet(LoginTest.java:68)
+</failure>
+    <system-out>Request method:	GET
+Request URI:	https://serverest.dev/produtos
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 OK
+access-control-allow-origin: *
+x-dns-prefetch-control: off
+x-frame-options: SAMEORIGIN
+strict-transport-security: max-age=15552000; includeSubDomains
+x-download-options: noopen
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+content-type: application/json; charset=utf-8
+X-Cloud-Trace-Context: 217fe895e846abe11e85d0ce28f0a1c1
+Date: Tue, 07 Nov 2023 05:39:11 GMT
+Server: Google Frontend
+Content-Length: 666
+
+{
+    &quot;quantidade&quot;: 3,
+    &quot;produtos&quot;: [
+        {
+            &quot;nome&quot;: &quot;Teste&quot;,
+            &quot;preco&quot;: 10,
+            &quot;descricao&quot;: &quot;Teste&quot;,
+            &quot;quantidade&quot;: 2,
+            &quot;imagem&quot;: &quot;C:\\fakepath\\cat-1046544.jpg&quot;,
+            &quot;_id&quot;: &quot;168naoTJ3UUbyAxL&quot;
+        },
+        {
+            &quot;nome&quot;: &quot;Logitech MX Vertical&quot;,
+            &quot;preco&quot;: 470,
+            &quot;descricao&quot;: &quot;Mouse&quot;,
+            &quot;quantidade&quot;: 382,
+            &quot;_id&quot;: &quot;BeeJh5lz3k6kSIzA&quot;
+        },
+        {
+            &quot;nome&quot;: &quot;Samsung 60 polegadas&quot;,
+            &quot;preco&quot;: 5240,
+            &quot;descricao&quot;: &quot;TV&quot;,
+            &quot;quantidade&quot;: 49977,
+            &quot;_id&quot;: &quot;K6leHdftCeOJj8BJ&quot;
+        }
+    ]
+}
+Produto nÃ£o encontrado
+</system-out>
+  </testcase>
+  <testcase classname="dev.serverest.tests.LoginTest" name="ProdutosPost" time="2.536"/>
+  <testcase classname="dev.serverest.tests.LoginTest" name="UsuariosDelete" time="0.315">
+    <failure message="expected [Registro excluÃ­do com sucesso] but found [Nenhum registro excluído]" type="java.lang.AssertionError">java.lang.AssertionError: expected [Registro excluÃ­do com sucesso] but found [Nenhum registro excluído]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at dev.serverest.tests.LoginTest.UsuariosDelete(LoginTest.java:40)
+</failure>
+    <system-out>Request method:	DELETE
+Request URI:	https://serverest.dev/usuarios/5nepsDr60dpDcmgk
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+</system-out>
+  </testcase>
+  <testcase classname="dev.serverest.tests.LoginTest" name="UsuariosGet" time="0.322">
+    <failure type="java.lang.AssertionError:">java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.fail(Assert.java:116)
+	at dev.serverest.api.applicationAPI.UsuariosAPI.assertNameThroughUserList(UsuariosAPI.java:78)
+	at dev.serverest.tests.LoginTest.UsuariosGet(LoginTest.java:32)
+</failure>
+    <system-out>Request method:	GET
+Request URI:	https://serverest.dev/usuarios
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 OK
+access-control-allow-origin: *
+x-dns-prefetch-control: off
+x-frame-options: SAMEORIGIN
+strict-transport-security: max-age=15552000; includeSubDomains
+x-download-options: noopen
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+content-type: application/json; charset=utf-8
+X-Cloud-Trace-Context: ec65da5f594ccb86a299ea67fb98bd07
+Date: Tue, 07 Nov 2023 05:39:14 GMT
+Server: Google Frontend
+Content-Length: 1114
+
+{
+    &quot;quantidade&quot;: 5,
+    &quot;usuarios&quot;: [
+        {
+            &quot;nome&quot;: &quot;Fulano da Silva&quot;,
+            &quot;email&quot;: &quot;fulano@qa.com&quot;,
+            &quot;password&quot;: &quot;teste&quot;,
+            &quot;administrador&quot;: &quot;true&quot;,
+            &quot;_id&quot;: &quot;0uxuPY0cbmQhpEz1&quot;
+        },
+        {
+            &quot;email&quot;: &quot;raffeeiie@qa.com.br&quot;,
+            &quot;password&quot;: &quot;raff&quot;,
+            &quot;nome&quot;: &quot;Rafael Macabuuuii&quot;,
+            &quot;administrador&quot;: &quot;true&quot;,
+            &quot;_id&quot;: &quot;BlSr5D58IBmirbKr&quot;
+        },
+        {
+            &quot;email&quot;: &quot;KléberHernandes032@qa.com&quot;,
+            &quot;password&quot;: &quot;8x1n1q3u&quot;,
+            &quot;nome&quot;: &quot;Kléber Hernandes&quot;,
+            &quot;administrador&quot;: &quot;false&quot;,
+            &quot;_id&quot;: &quot;EIrwABl1NZu7SMeW&quot;
+        },
+        {
+            &quot;email&quot;: &quot;MirellaPassarinho261@qa.com&quot;,
+            &quot;password&quot;: &quot;6o4a6g1n&quot;,
+            &quot;nome&quot;: &quot;Mirella Passarinho&quot;,
+            &quot;administrador&quot;: &quot;true&quot;,
+            &quot;_id&quot;: &quot;kC7p8rrNT2O4dcTS&quot;
+        },
+        {
+            &quot;nome&quot;: &quot;A K&quot;,
+            &quot;email&quot;: &quot;a.k@getnada.com&quot;,
+            &quot;password&quot;: &quot;teste&quot;,
+            &quot;administrador&quot;: &quot;false&quot;,
+            &quot;_id&quot;: &quot;p3dfFMZQQTTKuiwD&quot;
+        }
+    ]
+}
+UsuÃ¡rio nÃ£o encontrado
+</system-out>
+  </testcase>
+  <testcase classname="dev.serverest.tests.LoginTest" name="UsuariosPost" time="0.854"/>
+  <testcase classname="dev.serverest.tests.LoginTest" name="UsuariosPut" time="0.413">
+    <failure message="expected [Registro alterado com sucesso] but found [Este email já está sendo usado]" type="java.lang.AssertionError">java.lang.AssertionError: expected [Registro alterado com sucesso] but found [Este email já está sendo usado]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at dev.serverest.tests.LoginTest.UsuariosPut(LoginTest.java:50)
+</failure>
+    <system-out>Request method:	PUT
+Request URI:	https://serverest.dev/usuarios/9JRpwLureDpKp309
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;raffe@qa.com.br&quot;,
+    &quot;password&quot;: &quot;raff&quot;,
+    &quot;nome&quot;: &quot;Rafael Macabu&quot;,
+    &quot;administrador&quot;: &quot;true&quot;
+}
+</system-out>
+  </testcase>
+</testsuite>

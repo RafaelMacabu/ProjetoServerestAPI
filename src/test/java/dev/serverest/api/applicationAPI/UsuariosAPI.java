@@ -48,13 +48,13 @@ public class UsuariosAPI {
                 build();
     }
 
-    public static Usuario generateRandomUser(String admin){
+    public static Usuario generateRandomUser(Boolean admin){
         String nome = generateName();
         return Usuario.builder().
                 nome(nome).
                 password(generatePassword()).
                 email(generateEmail(nome.replace(" ",""))).
-                administrador(admin).
+                administrador(admin.toString()).
                 build();
     }
 
