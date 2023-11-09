@@ -31,7 +31,7 @@ public class TestNGRunner {
         testNGCucumberRunner.runScenario(pickleEvent.getPickle());
     }
 
-    @DataProvider
+    @DataProvider(parallel = true)
     public Object[][] scenarios() {
         return testNGCucumberRunner.provideScenarios();
     }

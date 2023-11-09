@@ -8,96 +8,13 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Command line suite</th></tr>
-<tr><td><a href="#t0">Command line test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">8</td><td class="num">11 248</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite1</th></tr>
+<tr><td><a href="#t0">Testes API de cadastro de usuarios</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">4 604</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Command line suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">dev.serverest.runners.TestNGRunner</td><td><a href="#m0">scenario</a></td><td rowspan="3">1699335547974</td><td rowspan="3">4472</td></tr><tr class="failedeven"><td><a href="#m1">scenario</a></td></tr><tr class="failedeven"><td><a href="#m2">scenario</a></td></tr><tr class="failedodd"><td rowspan="5">dev.serverest.tests.LoginTest</td><td><a href="#m3">Login</a></td><td rowspan="1">1699335552980</td><td rowspan="1">362</td></tr><tr class="failedodd"><td><a href="#m4">ProdutosGet</a></td><td rowspan="1">1699335553344</td><td rowspan="1">382</td></tr><tr class="failedodd"><td><a href="#m5">UsuariosDelete</a></td><td rowspan="1">1699335556305</td><td rowspan="1">314</td></tr><tr class="failedodd"><td><a href="#m6">UsuariosGet</a></td><td rowspan="1">1699335556621</td><td rowspan="1">321</td></tr><tr class="failedodd"><td><a href="#m7">UsuariosPut</a></td><td rowspan="1">1699335557798</td><td rowspan="1">413</td></tr><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">dev.serverest.tests.LoginTest</td><td><a href="#m8">ProdutosPost</a></td><td rowspan="1">1699335553731</td><td rowspan="1">2573</td></tr><tr class="passedeven"><td><a href="#m9">UsuariosPost</a></td><td rowspan="1">1699335556943</td><td rowspan="1">855</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite1</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Testes API de cadastro de usuarios &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">dev.serverest.runners.TestNGRunner</td><td><a href="#m0">scenario</a></td><td rowspan="3">1699420323419</td><td rowspan="3">3793</td></tr><tr class="passedeven"><td><a href="#m1">scenario</a></td></tr><tr class="passedeven"><td><a href="#m2">scenario</a></td></tr></tbody>
 </table>
-<h2>Command line test</h2><h3 id="m0">dev.serverest.runners.TestNGRunner#scenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Criando uma conta normal&quot;</td><td>&quot;Cenarios de teste de usuarios&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">io.cucumber.testng.UndefinedStepException: The step &apos;o status code será 201&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Entao(&quot;o status code será {int}&quot;)
-public void oStatusCodeSerá(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-	at dev.serverest.runners.TestNGRunner.scenario(TestNGRunner.java:31)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 37 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">dev.serverest.runners.TestNGRunner#scenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Criando uma conta admin&quot;</td><td>&quot;Cenarios de teste de usuarios&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">io.cucumber.testng.UndefinedStepException: The step &apos;o status code será 201&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Entao(&quot;o status code será {int}&quot;)
-public void oStatusCodeSerá(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-	at dev.serverest.runners.TestNGRunner.scenario(TestNGRunner.java:31)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 37 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">dev.serverest.runners.TestNGRunner#scenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Editando uma conta já criada&quot;</td><td>&quot;Cenarios de teste de usuarios&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">io.cucumber.testng.UndefinedStepException: The step &apos;tenho uma conta já cadastrada&apos; and 1 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Dado(&quot;tenho uma conta já cadastrada&quot;)
-public void tenhoUmaContaJáCadastrada() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Entao(&quot;o status code será {int}&quot;)
-public void oStatusCodeSerá(Integer int1) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-	at dev.serverest.runners.TestNGRunner.scenario(TestNGRunner.java:31)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 37 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">dev.serverest.tests.LoginTest#Login</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [200] but found [401]
-	at dev.serverest.tests.LoginTest.Login(LoginTest.java:57)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 44 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">dev.serverest.tests.LoginTest#ProdutosGet</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: null
-	at dev.serverest.api.applicationAPI.ProdutosAPI.assertProductNameThroughList(ProdutosAPI.java:49)
-	at dev.serverest.tests.LoginTest.ProdutosGet(LoginTest.java:68)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 39 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">dev.serverest.tests.LoginTest#UsuariosDelete</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Registro excluÃ­do com sucesso] but found [Nenhum registro excluído]
-	at dev.serverest.tests.LoginTest.UsuariosDelete(LoginTest.java:40)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 43 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">dev.serverest.tests.LoginTest#UsuariosGet</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: null
-	at dev.serverest.api.applicationAPI.UsuariosAPI.assertNameThroughUserList(UsuariosAPI.java:78)
-	at dev.serverest.tests.LoginTest.UsuariosGet(LoginTest.java:32)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 39 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">dev.serverest.tests.LoginTest#UsuariosPut</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Registro alterado com sucesso] but found [Este email já está sendo usado]
-	at dev.serverest.tests.LoginTest.UsuariosPut(LoginTest.java:50)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 43 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">dev.serverest.tests.LoginTest#ProdutosPost</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">dev.serverest.tests.LoginTest#UsuariosPost</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Testes API de cadastro de usuarios</h2><h3 id="m0">dev.serverest.runners.TestNGRunner#scenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Editando uma conta já criada&quot;</td><td>&quot;Cenarios de teste de usuarios&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">dev.serverest.runners.TestNGRunner#scenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Criando uma conta normal&quot;</td><td>&quot;Cenarios de teste de usuarios&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">dev.serverest.runners.TestNGRunner#scenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Criando uma conta admin&quot;</td><td>&quot;Cenarios de teste de usuarios&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

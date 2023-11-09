@@ -7,6 +7,7 @@ import io.restassured.response.Response;
 import org.testng.Assert;
 
 
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import static dev.serverest.api.Route.USUARIOS;
@@ -15,6 +16,12 @@ import static dev.serverest.utils.FakerUtils.*;
 public class UsuariosAPI {
     public static Response get() {
         return RestResource.get(USUARIOS);
+    }
+
+    public static Response get(String usuarioId){
+        Map<String,String> paramMap = Map.of("_id",usuarioId);
+
+        return RestResource.get(USUARIOS,paramMap);
     }
 
     public static Response post(Usuario requestUsuario) {

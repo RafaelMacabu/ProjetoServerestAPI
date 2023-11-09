@@ -2,6 +2,8 @@ package dev.serverest.api;
 
 import io.restassured.response.Response;
 
+import java.util.Map;
+
 import static dev.serverest.api.SpecBuilder.getReqSpec;
 import static dev.serverest.api.SpecBuilder.getRespSpec;
 import static io.restassured.RestAssured.given;
@@ -28,6 +30,16 @@ public class RestResource {
 
     public static Response get(String path) {
         return given(getReqSpec()).
+                when().
+                get(path).
+                then().spec(getRespSpec()).
+                extract().response();
+
+    }
+
+    public static Response get(String path, Map<String,String> query) {
+        return given(getReqSpec()).
+                queryParams(query).
                 when().
                 get(path).
                 then().spec(getRespSpec()).
