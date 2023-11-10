@@ -18,8 +18,8 @@ public class UsuariosAPI {
         return RestResource.get(USUARIOS);
     }
 
-    public static Response get(String usuarioId){
-        Map<String,String> paramMap = Map.of("_id",usuarioId);
+    public static Response get(String usuarioKey,String usuarioValue){
+        Map<String,String> paramMap = Map.of(usuarioKey,usuarioValue);
 
         return RestResource.get(USUARIOS,paramMap);
     }

@@ -14,6 +14,7 @@ import java.util.List;
 @Builder
 @Jacksonized
 @AllArgsConstructor
+@NoArgsConstructor
 public class Usuario {
     @JsonProperty("email")
     private String email;
