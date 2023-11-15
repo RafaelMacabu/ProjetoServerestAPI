@@ -43,7 +43,8 @@ public class UsuarioStepDef {
 
     @Entao("o status code sera {int}")
     public void o_status_code_sera(Integer status) {
-        Assert.assertEquals(UsuarioService.getResponse().get().statusCode(),status);
+        service.action().
+                assertStatus(status);
     }
 
     @Dado("que eu tenho uma conta ja cadastrada")
@@ -55,7 +56,8 @@ public class UsuarioStepDef {
 
     @Entao("a quantidade de usuarios achados sera {int}")
     public void a_Quantidade_De_Usuarios_Achados_Sera(int quantidade) {
-        Assert.assertEquals(UsuarioService.getResponseAsClassList().get().getQuantidade(), quantidade);
+        service.action().
+                assertQuantidade(quantidade);
     }
 
     @Dado("que eu tenho uma conta nao cadastrada")

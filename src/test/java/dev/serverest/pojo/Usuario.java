@@ -16,6 +16,7 @@ import java.util.List;
 @Jacksonized
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 //@JsonIgnoreProperties(ignoreUnknown = true)
 public class Usuario {
     @JsonProperty("email")

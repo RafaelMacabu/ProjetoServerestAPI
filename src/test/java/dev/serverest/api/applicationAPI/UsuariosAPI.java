@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 
 import static dev.serverest.api.Route.USUARIOS;
 import static dev.serverest.utils.FakerUtils.*;
+import static dev.serverest.utils.LogUtils.logInfo;
 
 public class UsuariosAPI {
     public static Response get() {
@@ -34,6 +35,31 @@ public class UsuariosAPI {
 
     public static Response put(Usuario requestUsuario,String userId){
         return RestResource.put(USUARIOS + "/" + userId,requestUsuario);
+    }
+
+    public static void logRequest(Usuario request){
+        logInfo("========== REQUEST BODY ==========");
+        logInfo("Nome: " + request.getNome());
+        logInfo("Email: " +request.getEmail());
+        logInfo("Senha: " +request.getPassword());
+        logInfo("Admin: " +request.getAdministrador());
+        logInfo("==================================");
+    }
+
+    public static void logResponse(Usuario responseAsClass){
+        logInfo("========== RESPONSE BODY ==========");
+        logInfo("Mensagem: " + responseAsClass.getMessage());
+        if (responseAsClass.getId() != null){
+            logInfo("Id: " + responseAsClass.getId());
+        }
+        logInfo("===================================");
+    }
+
+    public static void logResponseList(Usuarios responseAsClass){
+        logInfo("========== RESPONSE BODY ==========");
+        logInfo("Quantidade: " + responseAsClass.getQuantidade());
+        logInfo("Usuarios: " + responseAsClass.getUsuarios());
+        logInfo("===================================");
     }
 
     public static Usuario usuariosBuilder(String nome, String email, String password, String administrador) {

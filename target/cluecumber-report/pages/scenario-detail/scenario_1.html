@@ -79,7 +79,7 @@ font-src * data: blob: 'unsafe-inline';"/>
     "labels": [
       "dev.serverest.stepdef.Hooks.before(io.cucumber.java.Scenario)",
       "que eu tenho uma conta ja cadastrada",
-      "eu fizer um PUT na API de cadastro",
+      "eu fizer um POST na API de login",
       "o status code sera 200",
       "dev.serverest.stepdef.Hooks.deletarUsuario()",
       "dev.serverest.stepdef.Hooks.after()"
@@ -88,7 +88,7 @@ font-src * data: blob: 'unsafe-inline';"/>
       {
         "data": [
           0,
-          9,
+          3,
           0,
           0,
           0,
@@ -168,7 +168,7 @@ font-src * data: blob: 'unsafe-inline';"/>
         {
           "ticks": {
             "min": 0,
-            "stepSize": 9,
+            "stepSize": 3,
             "display": true
           },
           "stacked": true,
@@ -271,14 +271,14 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <a class="nav-link " href="pages/feature-summary.html">All Features</a>
                     </li>
             </ul>
-            <span class="text-light">2023-11-15 01:46:08</span>
+            <span class="text-light">2023-11-15 20:30:03</span>
         </div>
     </nav>
     <main role="main" class="container">
         <div class="cluecumber-template">
             <div class="pb-2 mt-4 mb-2 border-bottom">
-                        <h5><a href="pages/feature-scenarios/feature_1.html">Cenarios de teste de usuarios</a></h5>
-                    <h3>Editando uma conta já criada</h3>
+                        <h5><a href="pages/feature-scenarios/feature_0.html">Cenarios de teste de login</a></h5>
+                    <h3>Fazendo login</h3>
             </div>
 
     <div class="row" id="scenario-detail">
@@ -296,13 +296,13 @@ font-src * data: blob: 'unsafe-inline';"/>
         <div class="card h-100">
                 <div class="card-header">Scenario Info</div>
             <div class="card-body">
-                <li class="list-group-item">Started on:<br>2023-11-15 01:45:44</li>
-                <li class="list-group-item">Ended on:<br>2023-11-15 01:45:54</li>
-            <li class="list-group-item">Test Runtime:<br>0m 09s 984ms</li>
+                <li class="list-group-item">Started on:<br>2023-11-15 20:29:52</li>
+                <li class="list-group-item">Ended on:<br>2023-11-15 20:29:56</li>
+            <li class="list-group-item">Test Runtime:<br>0m 03s 785ms</li>
             <li class="list-group-item">
                     <a href="pages/tag-scenarios/tag_Test.html">@Test</a>,
 
-                    <a href="pages/tag-scenarios/tag_TesteUsuarios.html">@TesteUsuarios</a>,
+                    <a href="pages/tag-scenarios/tag_TestLogin.html">@TestLogin</a>,
 
                     <a href="pages/tag-scenarios/tag_CriandoUsuario.html">@CriandoUsuario</a>            </li>
             </div>
@@ -352,7 +352,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <i>dev.serverest.stepdef.Hooks.before(io.cucumber.java.Scenario)</i>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 000ms
+                                0m 00s 002ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -379,7 +379,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 09s 104ms
+                                0m 03s 039ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -388,7 +388,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
         <div class="row w-100 p-3 m-0 scenarioOutput">
             <div class="w-100 text-left small p-2">
-                email
+                ========== REQUEST BODY ==========<br>Nome: Pedro Tobias Brum<br>Email: PedroTobiasBrum828@qa.com<br>Senha: 8a7r7w3g<br>Admin: true<br>==================================<br>========== RESPONSE BODY ==========<br>Mensagem: Cadastro realizado com sucesso<br>Id: wP3JlTtXkYnObjun<br>===================================
             </div>
         </div>
                         </div>
@@ -397,12 +397,12 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-1 text-left small">2.</div>
                             <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="dev.serverest.stepdef.UsuarioStepDef.eu_fizer_um_POST_na_API_de_cadastro(java.lang.String,java.lang.String)">
-                                    <a href="pages/step-scenarios/step_0428145114.html"><span class="keyword">Quando </span> eu fizer um <span class="parameter">PUT</span> na API de <span class="parameter">cadastro</span></a>
+                                <span data-toggle="tooltip" title="dev.serverest.stepdef.UsuarioStepDef.euFizerUmPOSTNaAPIDeLogin()">
+                                    <a href="pages/step-scenarios/step_0477311805.html"><span class="keyword">Quando </span> eu fizer um POST na API de login</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 563ms
+                                0m 00s 384ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -427,6 +427,11 @@ font-src * data: blob: 'unsafe-inline';"/>
        title="passed"><span style="display:none">passed</span></i>
                             </div>
 
+        <div class="row w-100 p-3 m-0 scenarioOutput">
+            <div class="w-100 text-left small p-2">
+                Status: 200
+            </div>
+        </div>
                         </div>
                 </li>
             </div>
@@ -445,7 +450,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                     <i>dev.serverest.stepdef.Hooks.deletarUsuario()</i>
                                 </div>
                                 <div class="col-2 text-left small">
-                                    0m 00s 315ms
+                                    0m 00s 358ms
                                 </div>
                                 <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -476,7 +481,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span>Cluecumber Report Plugin version 2.3.4 - Report generated on 2023-11-15 01:46:08.</span>
+        <span>Cluecumber Report Plugin version 2.3.4 - Report generated on 2023-11-15 20:30:03.</span>
     </div>
 </footer>    </body>
     </html>

@@ -1,5 +1,6 @@
 package dev.serverest.api;
 
+import dev.serverest.config.ApiConfig;
 import io.restassured.response.Response;
 
 import java.util.Map;
@@ -8,7 +9,7 @@ import static dev.serverest.api.SpecBuilder.getReqSpec;
 import static dev.serverest.api.SpecBuilder.getRespSpec;
 import static io.restassured.RestAssured.given;
 
-public class RestResource {
+public class RestResource extends ApiConfig {
     public static Response post(String path, Object request) {
         return given(getReqSpec()).
                 body(request).
