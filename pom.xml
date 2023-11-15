@@ -27,6 +27,33 @@
                     <threadCount>10</threadCount>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>com.trivago.rta</groupId>
+                <artifactId>cluecumber-report-plugin</artifactId>
+                <version>2.3.4</version>
+                <executions>
+                    <execution>
+                        <id>report</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>reporting</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <sourceJsonReportDirectory>${project.build.directory}/
+                    </sourceJsonReportDirectory>
+                    <generatedHtmlReportDirectory>${project.build.directory}/cluecumber-report
+                    </generatedHtmlReportDirectory>
+                    <customPageTitle>Relatorio de execucao</customPageTitle>
+                    <expandBeforeAfterHooks>true</expandBeforeAfterHooks>
+                    <expandStepHooks>true</expandStepHooks>
+                    <expandDocStrings>true</expandDocStrings>
+                    <customParameters>
+                        <Projeto>ServerRestAPI</Projeto>
+                    </customParameters>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 

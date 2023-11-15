@@ -10,67 +10,60 @@ import lombok.Getter;
 import lombok.Setter;
 
 import static dev.serverest.api.applicationAPI.UsuariosAPI.generateRandomUser;
+import static dev.serverest.utils.LogUtils.logInfo;
 
 
 public class UsuarioService {
     @Getter
-    private static Login requestLogin = new Login();
+    private static ThreadLocal<Login> requestLogin = new ThreadLocal<>();
     @Getter
-    private static Usuario responseAsClass = new Usuario();
+    private static ThreadLocal<Usuario> responseAsClass = new ThreadLocal<>();
     @Getter
-    private static Usuarios responseAsClassList = new Usuarios();
-    @Getter
-    private static Usuario requestUsuario = new Usuario();
+    private static ThreadLocal<Usuarios> responseAsClassList = new ThreadLocal<>();
     @Getter
     @Setter
-    private static Response response;
+    private static ThreadLocal<Usuario> requestUsuario = new ThreadLocal<>();
+    @Getter
+    @Setter
+    private static ThreadLocal<Response> response = new ThreadLocal<>();
 
     public UsuarioService action() {
         return this;
     }
 
     public UsuarioService gerarUsuario() {
-        requestUsuario = generateRandomUser();
+        requestUsuario.set(generateRandomUser());
         return this;
     }
 
     public UsuarioService gerarUsuario(String tipo) {
-        requestUsuario = generateRandomUser(tipo.equals("admin"));
+        requestUsuario.set(generateRandomUser(tipo.equals("admin")));
         return this;
     }
 
     public void cadastrarUsuario() {
-        response = UsuariosAPI.post(requestUsuario);
-        responseAsClass = response.as(Usuario.class);
+        response.set(UsuariosAPI.post(requestUsuario.get()));
+        responseAsClass.set(response.get().as(Usuario.class));
     }
 
     public void editarUsuario(){
-        requestUsuario = generateRandomUser();
-        response = UsuariosAPI.put(requestUsuario, responseAsClass.getId());
+        requestUsuario.set(generateRandomUser());
+        response.set(UsuariosAPI.put(requestUsuario.get(),responseAsClass.get().getId()));
     }
 
     public void acharUsuarios(){
-        response = UsuariosAPI.get();
-        responseAsClassList = response.as(Usuarios.class);
+        response.set(UsuariosAPI.get());
+        responseAsClassList.set(response.get().as(Usuarios.class));
     }
 
     public void acharUsuarioPorID(){
-        response = UsuariosAPI.get("_id", responseAsClass.getId());
-        responseAsClassList = response.as(Usuarios.class);
+        response.set(UsuariosAPI.get("_id",responseAsClass.get().getId()));
+        responseAsClassList.set(response.get().as(Usuarios.class));
     }
 
     public void realizarLogin(){
-        requestLogin = LoginAPI.loginBuilder(requestUsuario.getEmail(), requestUsuario.getPassword());
-        response = LoginAPI.post(requestLogin);
+        requestLogin.set(LoginAPI.loginBuilder(requestUsuario.get().getEmail(),requestUsuario.get().getPassword()));
+        response.set(LoginAPI.post(requestLogin.get()));
     }
 
-    public Usuario setResponseAsClass(Response response) {
-        responseAsClass = response.as(Usuario.class);
-        return responseAsClass;
-    }
-
-    public Usuarios setResponseAsClassList(Response response) {
-        responseAsClassList = response.as(Usuarios.class);
-        return responseAsClassList;
-    }
 }

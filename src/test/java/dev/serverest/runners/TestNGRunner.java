@@ -10,7 +10,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 @CucumberOptions(
-        plugin = {"pretty","html:target/cucumber","summary"},
+        plugin = {"pretty","json:target/cucumber.json","summary"},
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         dryRun = false,
         monochrome = true,
@@ -31,7 +31,7 @@ public class TestNGRunner {
         testNGCucumberRunner.runScenario(pickleEvent.getPickle());
     }
 
-    @DataProvider(parallel = false)
+    @DataProvider(parallel = true)
     public Object[][] scenarios() {
         return testNGCucumberRunner.provideScenarios();
     }
