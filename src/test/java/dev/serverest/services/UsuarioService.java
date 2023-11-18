@@ -14,17 +14,11 @@ import static dev.serverest.utils.LogUtils.logInfo;
 
 
 public class UsuarioService extends Assertions {
-    @Getter
     private static ThreadLocal<Login> requestLogin = new ThreadLocal<>();
     @Getter
     private static ThreadLocal<Usuario> responseAsClass = new ThreadLocal<>();
-    @Getter
     private static ThreadLocal<Usuarios> responseAsClassList = new ThreadLocal<>();
-    @Getter
-    @Setter
     private static ThreadLocal<Usuario> requestUsuario = new ThreadLocal<>();
-    @Getter
-    @Setter
     private static ThreadLocal<Response> response = new ThreadLocal<>();
 
     public UsuarioService action() {

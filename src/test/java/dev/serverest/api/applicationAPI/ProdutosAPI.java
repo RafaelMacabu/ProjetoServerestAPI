@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 
 import static dev.serverest.api.Route.PRODUTOS;
 import static dev.serverest.api.TokenManager.getToken;
+import static dev.serverest.utils.FakerUtils.*;
 
 public class ProdutosAPI {
     public static Response get(){
@@ -31,6 +32,15 @@ public class ProdutosAPI {
                 preco(preco).
                 descricao(descricao).
                 quantidade(quantidade).
+                build();
+    }
+
+    public static Produto generateRandomProduct(){
+        return Produto.builder().
+                nome(generateProductName()).
+                preco(Double.parseDouble(generatePrice())).
+                descricao("Placa de video").
+                quantidade(Long.parseLong(generateQuantity())).
                 build();
     }
 

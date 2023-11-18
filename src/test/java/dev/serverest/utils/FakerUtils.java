@@ -20,4 +20,21 @@ public class FakerUtils {
         Faker faker = new Faker();
         return faker.bothify("#?#?#?#?");
     }
+
+    public static String generateProductName(){
+        Faker faker = new Faker();
+        return "Placa Nvidia" + faker.regexify("[0-9]{4}") + " GTX";
+    }
+
+    public static String generatePrice(){
+        Faker faker = new Faker();
+        return faker.regexify("[0-9]{3}");
+    }
+
+    public static String generateQuantity(){
+        Faker faker = new Faker();
+        return faker.regexify("[0-9]{2}");
+    }
+
+
 }
