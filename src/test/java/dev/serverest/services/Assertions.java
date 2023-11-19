@@ -5,7 +5,7 @@ import org.testng.Assert;
 
 public class Assertions {
 
-    protected void assertEquals(Object actual,Object expected){
+    public static void assertEquals(Object actual,Object expected){
         Assert.assertEquals(actual,expected);
     }
 }

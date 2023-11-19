@@ -41,12 +41,6 @@ public class UsuarioStepDef {
         }
     }
 
-    @Entao("o status code sera {int}")
-    public void o_status_code_sera(Integer status) {
-        service.action().
-                assertStatus(status);
-    }
-
     @Dado("que eu tenho uma conta ja cadastrada")
     public void tenho_Uma_Conta_Ja_Cadastrada() {
         service.action().
@@ -54,7 +48,7 @@ public class UsuarioStepDef {
                 cadastrarUsuario();
     }
 
-    @Entao("a quantidade de usuarios achados sera {int}")
+    @Entao("a quantidade de usuarios encontrados sera {int}")
     public void a_Quantidade_De_Usuarios_Achados_Sera(int quantidade) {
         service.action().
                 assertQuantidade(quantidade);

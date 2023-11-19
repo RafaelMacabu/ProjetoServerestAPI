@@ -33,7 +33,7 @@ public class FakerUtils {
 
     public static String generateQuantity(){
         Faker faker = new Faker();
-        return faker.regexify("[0-9]{2}");
+        return faker.regexify("[1][0-9]{2}");
     }
 
 

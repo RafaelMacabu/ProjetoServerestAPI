@@ -26,7 +26,7 @@ Funcionalidade: Cenarios de teste de usuarios
   Cenario: Achando um usuario
     Dado que eu tenho uma conta ja cadastrada
     Quando eu fizer um GET na API de cadastro com o id
-    Entao a quantidade de usuarios achados sera 1
+    Entao a quantidade de usuarios encontrados sera 1
 
 
 

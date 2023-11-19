@@ -7,6 +7,7 @@ import dev.serverest.pojo.Usuario;
 import io.restassured.response.Response;
 
 import static dev.serverest.api.applicationAPI.UsuariosAPI.usuariosBuilder;
+import static dev.serverest.services.UsuarioService.responseAsClass;
 
 public class TokenManager {
     static String bearer_token;
@@ -21,7 +22,8 @@ public class TokenManager {
     }
 
     private static Response renewToken(Usuario requestUsuario){
-        UsuariosAPI.post(requestUsuario);
+        Response response = UsuariosAPI.post(requestUsuario);
+        responseAsClass.set(response.as(Usuario.class));
         Login requestLogin = LoginAPI.loginBuilder(requestUsuario.getEmail(),requestUsuario.getPassword());
         Response responseLogin = LoginAPI.post(requestLogin);
         return responseLogin;

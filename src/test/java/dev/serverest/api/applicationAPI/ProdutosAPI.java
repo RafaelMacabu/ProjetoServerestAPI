@@ -4,18 +4,28 @@ import dev.serverest.api.RestResource;
 import dev.serverest.pojo.Produto;
 import dev.serverest.pojo.Produtos;
 import dev.serverest.pojo.Usuario;
+import dev.serverest.pojo.Usuarios;
 import io.restassured.response.Response;
 import org.testng.Assert;
 
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import static dev.serverest.api.Route.PRODUTOS;
+import static dev.serverest.api.Route.USUARIOS;
 import static dev.serverest.api.TokenManager.getToken;
 import static dev.serverest.utils.FakerUtils.*;
+import static dev.serverest.utils.LogUtils.logInfo;
 
 public class ProdutosAPI {
     public static Response get(){
         return RestResource.get(PRODUTOS);
+    }
+
+    public static Response get(String usuarioKey,String usuarioValue){
+        Map<String,String> paramMap = Map.of(usuarioKey,usuarioValue);
+
+        return RestResource.get(PRODUTOS,paramMap);
     }
 
     public static Response post(Produto requestProduto,String bearer){
@@ -42,6 +52,31 @@ public class ProdutosAPI {
                 descricao("Placa de video").
                 quantidade(Long.parseLong(generateQuantity())).
                 build();
+    }
+
+    public static void logRequest(Produto request){
+        logInfo("========== REQUEST BODY ==========");
+        logInfo("Nome: " + request.getNome());
+        logInfo("Preço: " +request.getPreco());
+        logInfo("Descrição: " +request.getDescricao());
+        logInfo("Quantidade: " +request.getQuantidade());
+        logInfo("==================================");
+    }
+
+    public static void logResponse(Produto responseAsClass){
+        logInfo("========== RESPONSE BODY ==========");
+        logInfo("Mensagem: " + responseAsClass.getMessage());
+        if (responseAsClass.getId() != null){
+            logInfo("Id: " + responseAsClass.getId());
+        }
+        logInfo("===================================");
+    }
+
+    public static void logResponseList(Produtos responseAsClass){
+        logInfo("========== RESPONSE BODY ==========");
+        logInfo("Quantidade: " + responseAsClass.getQuantidade());
+        logInfo("Produtos: " + responseAsClass.getProdutos());
+        logInfo("===================================");
     }
 
     public static void assertProductNameThroughList(String produtoNome, Produtos responseProdutos){

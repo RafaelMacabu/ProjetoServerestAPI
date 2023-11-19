@@ -10,16 +10,16 @@ import lombok.Getter;
 import lombok.Setter;
 
 import static dev.serverest.api.applicationAPI.UsuariosAPI.*;
+import static dev.serverest.services.Assertions.assertEquals;
 import static dev.serverest.utils.LogUtils.logInfo;
 
 
-public class UsuarioService extends Assertions {
+public class UsuarioService extends BaseService {
     private static ThreadLocal<Login> requestLogin = new ThreadLocal<>();
     @Getter
-    private static ThreadLocal<Usuario> responseAsClass = new ThreadLocal<>();
+    public static ThreadLocal<Usuario> responseAsClass = new ThreadLocal<>();
     private static ThreadLocal<Usuarios> responseAsClassList = new ThreadLocal<>();
     private static ThreadLocal<Usuario> requestUsuario = new ThreadLocal<>();
-    private static ThreadLocal<Response> response = new ThreadLocal<>();
 
     public UsuarioService action() {
         return this;
@@ -66,11 +66,6 @@ public class UsuarioService extends Assertions {
     public void realizarLogin(){
         requestLogin.set(LoginAPI.loginBuilder(requestUsuario.get().getEmail(),requestUsuario.get().getPassword()));
         response.set(LoginAPI.post(requestLogin.get()));
-    }
-
-    public void assertStatus(Integer status){
-        assertEquals(response.get().getStatusCode(),status);
-        logInfo("Status: " + response.get().statusCode());
     }
 
     public void assertQuantidade(Integer quantidade){
