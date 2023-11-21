@@ -4,9 +4,11 @@ import dev.serverest.api.applicationAPI.LoginAPI;
 import dev.serverest.api.applicationAPI.UsuariosAPI;
 import dev.serverest.pojo.Login;
 import dev.serverest.pojo.Usuario;
+import dev.serverest.services.UsuarioService;
 import io.restassured.response.Response;
 
 import static dev.serverest.api.applicationAPI.UsuariosAPI.usuariosBuilder;
+import static dev.serverest.services.UsuarioService.idUsuario;
 import static dev.serverest.services.UsuarioService.responseAsClass;
 
 public class TokenManager {
@@ -24,6 +26,7 @@ public class TokenManager {
     private static Response renewToken(Usuario requestUsuario){
         Response response = UsuariosAPI.post(requestUsuario);
         responseAsClass.set(response.as(Usuario.class));
+        idUsuario.set(responseAsClass.get().getId());
         Login requestLogin = LoginAPI.loginBuilder(requestUsuario.getEmail(),requestUsuario.getPassword());
         Response responseLogin = LoginAPI.post(requestLogin);
         return responseLogin;

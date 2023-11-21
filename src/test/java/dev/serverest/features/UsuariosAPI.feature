@@ -17,7 +17,7 @@ Funcionalidade: Cenarios de teste de usuarios
     Entao o status code sera 201
 
   @CriandoUsuario
-  Cenario: Editando uma conta já criada
+  Cenario: Editando uma conta pre-existente
     Dado que eu tenho uma conta ja cadastrada
     Quando eu fizer um PUT na API de cadastro
     Entao o status code sera 200

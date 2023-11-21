@@ -57,8 +57,27 @@ public class RestResource extends ApiConfig {
                 extract().response();
     }
 
+    public static Response put(String path, Object request,String bearerToken) {
+        return given(getReqSpec()).
+                header("Authorization",bearerToken).
+                body(request).
+                when().
+                put(path).
+                then().
+                extract().response();
+    }
+
     public static Response delete(String path) {
         return given(getReqSpec()).
+                when().
+                delete(path).
+                then().
+                extract().response();
+    }
+
+    public static Response delete(String path,String bearerToken) {
+        return given(getReqSpec()).
+                header("Authorization",bearerToken).
                 when().
                 delete(path).
                 then().

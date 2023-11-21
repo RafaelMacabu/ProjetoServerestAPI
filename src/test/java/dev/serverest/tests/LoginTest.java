@@ -9,7 +9,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static dev.serverest.api.applicationAPI.LoginAPI.loginBuilder;
-import static dev.serverest.api.applicationAPI.ProdutosAPI.assertProductNameThroughList;
 import static dev.serverest.api.applicationAPI.ProdutosAPI.produtoBuilder;
 import static dev.serverest.api.applicationAPI.UsuariosAPI.assertNameThroughUserList;
 import static dev.serverest.api.applicationAPI.UsuariosAPI.usuariosBuilder;
@@ -61,13 +60,13 @@ public class LoginTest {
     }
 
 
-    @Test
+   /* @Test
     public void ProdutosGet(){
         Response response = ProdutosAPI.get();
         Produtos produtos = response.as(Produtos.class);
         assertProductNameThroughList("bosta",produtos);
 
-    }
+    }*/
 
     @Test
     public void ProdutosPost(){

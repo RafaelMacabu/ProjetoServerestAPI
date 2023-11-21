@@ -3,16 +3,22 @@ package dev.serverest.services;
 import dev.serverest.api.applicationAPI.ProdutosAPI;
 import dev.serverest.api.applicationAPI.UsuariosAPI;
 import dev.serverest.pojo.*;
+import lombok.Getter;
 
 import static dev.serverest.api.applicationAPI.ProdutosAPI.*;
 import static dev.serverest.api.applicationAPI.UsuariosAPI.generateRandomUser;
+import static dev.serverest.api.applicationAPI.ProdutosAPI.logRequest;
+import static dev.serverest.api.applicationAPI.ProdutosAPI.logResponse;
 import static dev.serverest.services.Assertions.assertEquals;
 import static dev.serverest.utils.LogUtils.logInfo;
 
 public class ProdutosService extends BaseService {
     private static ThreadLocal<Produto> requestProduto = new ThreadLocal<>();
+    @Getter
     private static ThreadLocal<Produto> responseAsClass = new ThreadLocal<>();
     private static ThreadLocal<Produtos> responseAsClassList = new ThreadLocal<>();
+    @Getter
+    private static ThreadLocal<String> idProduto = new ThreadLocal<>();
 
     public ProdutosService action() {
         return this;
@@ -27,6 +33,8 @@ public class ProdutosService extends BaseService {
     public void cadastrarProduto() {
         response.set(ProdutosAPI.post(requestProduto.get(), generateRandomUser()));
         responseAsClass.set(response.get().as(Produto.class));
+        idProduto.set(responseAsClass.get().getId());
+        logResponse(responseAsClass.get());
     }
 
     public void acharUsuarios(){
@@ -39,6 +47,14 @@ public class ProdutosService extends BaseService {
         response.set(ProdutosAPI.get("_id",responseAsClass.get().getId()));
         responseAsClassList.set(response.get().as(Produtos.class));
         logResponseList(responseAsClassList.get());
+    }
+
+    public void editarProduto(){
+        requestProduto.set(generateRandomProduct());
+        response.set(ProdutosAPI.put(requestProduto.get(),responseAsClass.get().getId()));
+        responseAsClass.set(response.get().as(Produto.class));
+        logRequest(requestProduto.get());
+        logResponse(responseAsClass.get());
     }
 
     public void assertQuantidade(Integer quantidade){

@@ -18,25 +18,38 @@ import static dev.serverest.utils.FakerUtils.*;
 import static dev.serverest.utils.LogUtils.logInfo;
 
 public class ProdutosAPI {
-    public static Response get(){
+    private static ThreadLocal<String> bearerToken = new ThreadLocal<>();
+
+    public static Response get() {
         return RestResource.get(PRODUTOS);
     }
 
-    public static Response get(String usuarioKey,String usuarioValue){
-        Map<String,String> paramMap = Map.of(usuarioKey,usuarioValue);
+    public static Response get(String usuarioKey, String usuarioValue) {
+        Map<String, String> paramMap = Map.of(usuarioKey, usuarioValue);
 
-        return RestResource.get(PRODUTOS,paramMap);
+        return RestResource.get(PRODUTOS, paramMap);
     }
 
-    public static Response post(Produto requestProduto,String bearer){
-        return RestResource.post(PRODUTOS,bearer,requestProduto);
+    public static Response post(Produto requestProduto, String bearer) {
+        return RestResource.post(PRODUTOS, bearer, requestProduto);
     }
 
-    public static Response post(Produto requestProduto, Usuario requestUsuario){
-        return RestResource.post(PRODUTOS,getToken(requestUsuario),requestProduto);
+    public static Response post(Produto requestProduto, Usuario requestUsuario) {
+        bearerToken.set(getToken(requestUsuario));
+        return RestResource.post(PRODUTOS, bearerToken.get(), requestProduto);
     }
 
-    public static Produto produtoBuilder(String nome,double preco,String descricao,int quantidade){
+    public static void delete(String productId) {
+        if (bearerToken != null){
+            RestResource.delete(PRODUTOS + "/" + productId, bearerToken.get());
+        }
+    }
+
+    public static Response put(Produto requestProduto, String productId) {
+        return RestResource.put(PRODUTOS + "/" + productId, requestProduto,bearerToken.get());
+    }
+
+    public static Produto produtoBuilder(String nome, double preco, String descricao, int quantidade) {
         return Produto.builder().
                 nome(nome).
                 preco(preco).
@@ -45,7 +58,7 @@ public class ProdutosAPI {
                 build();
     }
 
-    public static Produto generateRandomProduct(){
+    public static Produto generateRandomProduct() {
         return Produto.builder().
                 nome(generateProductName()).
                 preco(Double.parseDouble(generatePrice())).
@@ -54,33 +67,33 @@ public class ProdutosAPI {
                 build();
     }
 
-    public static void logRequest(Produto request){
+    public static void logRequest(Produto request) {
         logInfo("========== REQUEST BODY ==========");
         logInfo("Nome: " + request.getNome());
-        logInfo("Preço: " +request.getPreco());
-        logInfo("Descrição: " +request.getDescricao());
-        logInfo("Quantidade: " +request.getQuantidade());
+        logInfo("Preço: " + request.getPreco());
+        logInfo("Descrição: " + request.getDescricao());
+        logInfo("Quantidade: " + request.getQuantidade());
         logInfo("==================================");
     }
 
-    public static void logResponse(Produto responseAsClass){
+    public static void logResponse(Produto responseAsClass) {
         logInfo("========== RESPONSE BODY ==========");
         logInfo("Mensagem: " + responseAsClass.getMessage());
-        if (responseAsClass.getId() != null){
+        if (responseAsClass.getId() != null) {
             logInfo("Id: " + responseAsClass.getId());
         }
         logInfo("===================================");
     }
 
-    public static void logResponseList(Produtos responseAsClass){
+    public static void logResponseList(Produtos responseAsClass) {
         logInfo("========== RESPONSE BODY ==========");
         logInfo("Quantidade: " + responseAsClass.getQuantidade());
         logInfo("Produtos: " + responseAsClass.getProdutos());
         logInfo("===================================");
     }
 
-    public static void assertProductNameThroughList(String produtoNome, Produtos responseProdutos){
-        try{
+    public static void assertProductNameThroughList(String produtoNome, Produtos responseProdutos) {
+        try {
             Produto produto = responseProdutos.getProdutos().
                     stream().
                     filter(e -> e.getNome().equals(produtoNome)).
@@ -89,7 +102,7 @@ public class ProdutosAPI {
             System.out.println(produto.getNome());
             System.out.println(produto.getDescricao());
             Assert.assertEquals(produto.getNome(), produtoNome);
-        }catch (IndexOutOfBoundsException exception){
+        } catch (IndexOutOfBoundsException exception) {
             System.out.println("Produto não encontrado");
             Assert.fail();
         }

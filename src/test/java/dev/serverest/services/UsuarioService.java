@@ -20,6 +20,8 @@ public class UsuarioService extends BaseService {
     public static ThreadLocal<Usuario> responseAsClass = new ThreadLocal<>();
     private static ThreadLocal<Usuarios> responseAsClassList = new ThreadLocal<>();
     private static ThreadLocal<Usuario> requestUsuario = new ThreadLocal<>();
+    @Getter
+    public static ThreadLocal<String> idUsuario = new ThreadLocal<>();
 
     public UsuarioService action() {
         return this;
@@ -40,6 +42,7 @@ public class UsuarioService extends BaseService {
     public void cadastrarUsuario() {
         response.set(UsuariosAPI.post(requestUsuario.get()));
         responseAsClass.set(response.get().as(Usuario.class));
+        idUsuario.set(responseAsClass.get().getId());
         logResponse(responseAsClass.get());
     }
 

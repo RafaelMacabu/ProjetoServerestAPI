@@ -78,9 +78,9 @@ font-src * data: blob: 'unsafe-inline';"/>
   "data": {
     "labels": [
       "dev.serverest.stepdef.Hooks.before(io.cucumber.java.Scenario)",
-      "que tenho um produto ja criado",
-      "eu fizer um GET na API de produtos com o id",
-      "a quantidade de produtos encontrados sera 1",
+      "que quero criar um produto",
+      "eu fizer um POST na API de produtos",
+      "o status code sera 201",
       "dev.serverest.stepdef.Hooks.deletarUsuario()",
       "dev.serverest.stepdef.Hooks.after()"
     ],
@@ -88,8 +88,8 @@ font-src * data: blob: 'unsafe-inline';"/>
       {
         "data": [
           0,
-          4,
           0,
+          4,
           0,
           0,
           0
@@ -271,14 +271,14 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <a class="nav-link " href="pages/feature-summary.html">All Features</a>
                     </li>
             </ul>
-            <span class="text-light">2023-11-19 00:26:08</span>
+            <span class="text-light">2023-11-20 03:13:05</span>
         </div>
     </nav>
     <main role="main" class="container">
         <div class="cluecumber-template">
             <div class="pb-2 mt-4 mb-2 border-bottom">
                         <h5><a href="pages/feature-scenarios/feature_1.html">Cenarios de teste de produtos</a></h5>
-                    <h3>Procurando um produto pelo ID</h3>
+                    <h3>Cadastrando um produto</h3>
             </div>
 
     <div class="row" id="scenario-detail">
@@ -296,9 +296,9 @@ font-src * data: blob: 'unsafe-inline';"/>
         <div class="card h-100">
                 <div class="card-header">Scenario Info</div>
             <div class="card-body">
-                <li class="list-group-item">Started on:<br>2023-11-19 00:25:17</li>
-                <li class="list-group-item">Ended on:<br>2023-11-19 00:25:23</li>
-            <li class="list-group-item">Test Runtime:<br>0m 05s 522ms</li>
+                <li class="list-group-item">Started on:<br>2023-11-20 03:12:41</li>
+                <li class="list-group-item">Ended on:<br>2023-11-20 03:12:46</li>
+            <li class="list-group-item">Test Runtime:<br>0m 05s 151ms</li>
             <li class="list-group-item">
                     <a href="pages/tag-scenarios/tag_Test.html">@Test</a>,
 
@@ -352,7 +352,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <i>dev.serverest.stepdef.Hooks.before(io.cucumber.java.Scenario)</i>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 003ms
+                                0m 00s 000ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -374,30 +374,12 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-1 text-left small">1.</div>
                             <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="dev.serverest.stepdef.ProdutoStepDef.queTenhoUmProdutoJaCriado()">
-                                    <a href="pages/step-scenarios/step_01473307246.html"><span class="keyword">Dado </span> que tenho um produto ja criado</a>
+                                <span data-toggle="tooltip" title="dev.serverest.stepdef.ProdutoStepDef.que_quero_criar_um_produto()">
+                                    <a href="pages/step-scenarios/step_01167781670.html"><span class="keyword">Dado </span> que quero criar um produto</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 04s 841ms
-                            </div>
-                            <div class="col-1 text-right">
-    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
-       title="passed"><span style="display:none">passed</span></i>
-                            </div>
-
-                        </div>
-
-
-                        <div class="row row_passed table-row-passed">
-                            <div class="col-1 text-left small">2.</div>
-                            <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="dev.serverest.stepdef.ProdutoStepDef.eu_fizer_um_post_na_api_de_produtos(java.lang.String,java.lang.String)">
-                                    <a href="pages/step-scenarios/step_745503376.html"><span class="keyword">Quando </span> eu fizer um <span class="parameter">GET</span> na API de <span class="parameter">produtos com o id</span></a>
-                                </span>
-                            </div>
-                            <div class="col-2 text-left small">
-                                0m 00s 334ms
+                                0m 00s 085ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -406,17 +388,35 @@ font-src * data: blob: 'unsafe-inline';"/>
 
         <div class="row w-100 p-3 m-0 scenarioOutput">
             <div class="w-100 text-left small p-2">
-                ========== RESPONSE BODY ==========<br>Quantidade: 1<br>Produtos: [dev.serverest.pojo.Produto@78f35ec5]<br>===================================
+                ========== REQUEST BODY ==========<br>Nome: Placa Nvidia3513 GTX<br>Preço: 377.0<br>Descrição: Placa de video<br>Quantidade: 135<br>==================================
             </div>
         </div>
                         </div>
 
 
                         <div class="row row_passed table-row-passed">
+                            <div class="col-1 text-left small">2.</div>
+                            <div class="col-8 text-left">
+                                <span data-toggle="tooltip" title="dev.serverest.stepdef.ProdutoStepDef.eu_fizer_um_post_na_api_de_produtos(java.lang.String,java.lang.String)">
+                                    <a href="pages/step-scenarios/step_745503376.html"><span class="keyword">Quando </span> eu fizer um <span class="parameter">POST</span> na API de <span class="parameter">produtos</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 04s 749ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
                             <div class="col-1 text-left small">3.</div>
                             <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="dev.serverest.stepdef.ProdutoStepDef.aQuantidadeDeProdutosEncontradosSera(int)">
-                                    <a href="pages/step-scenarios/step_01851517587.html"><span class="keyword">Entao </span> a quantidade de produtos encontrados sera <span class="parameter">1</span></a>
+                                <span data-toggle="tooltip" title="dev.serverest.stepdef.CommonStepDef.o_status_code_sera(java.lang.Integer)">
+                                    <a href="pages/step-scenarios/step_1809871351.html"><span class="keyword">Entao </span> o status code sera <span class="parameter">201</span></a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
@@ -429,7 +429,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
         <div class="row w-100 p-3 m-0 scenarioOutput">
             <div class="w-100 text-left small p-2">
-                Quantidade de produtos encontrados: 1
+                Status: 201
             </div>
         </div>
                         </div>
@@ -450,7 +450,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                     <i>dev.serverest.stepdef.Hooks.deletarUsuario()</i>
                                 </div>
                                 <div class="col-2 text-left small">
-                                    0m 00s 343ms
+                                    0m 00s 316ms
                                 </div>
                                 <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -481,7 +481,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span>Cluecumber Report Plugin version 2.3.4 - Report generated on 2023-11-19 00:26:08.</span>
+        <span>Cluecumber Report Plugin version 2.3.4 - Report generated on 2023-11-20 03:13:05.</span>
     </div>
 </footer>    </body>
     </html>

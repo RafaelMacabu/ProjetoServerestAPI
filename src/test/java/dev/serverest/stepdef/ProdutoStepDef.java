@@ -13,30 +13,33 @@ public class ProdutoStepDef {
         service.action()
                 .criarProduto();
     }
+
     @Quando("^eu fizer um (POST|GET|PUT) na API de (produtos|produtos com o id)$")
-    public void eu_fizer_um_post_na_api_de_produtos(String metodo,String produtos) {
-        switch (metodo){
+    public void eu_fizer_um_post_na_api_de_produtos(String metodo, String produtos) {
+        switch (metodo) {
             case "POST":
                 service.action().
                         cadastrarProduto();
                 break;
             case "GET":
-                if (produtos.contains("id")){
+                if (produtos.contains("id")) {
                     service.action().
                             acharUsuarioPorID();
-                }else {
+                } else {
                     service.action().
                             acharUsuarios();
                 }
                 break;
             case "PUT":
+                service.action().
+                        editarProduto();
                 break;
             default:
                 throw new IllegalArgumentException("Opção não parametrizada");
         }
     }
 
-    @Dado("que tenho um produto ja criado")
+    @Dado("que tenho um produto ja cadastrado")
     public void queTenhoUmProdutoJaCriado() {
         service.action().
                 criarProduto().
