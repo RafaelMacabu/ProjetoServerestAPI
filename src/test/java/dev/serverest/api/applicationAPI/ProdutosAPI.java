@@ -1,6 +1,7 @@
 package dev.serverest.api.applicationAPI;
 
 import dev.serverest.api.RestResource;
+import dev.serverest.api.TokenManager;
 import dev.serverest.pojo.Produto;
 import dev.serverest.pojo.Produtos;
 import dev.serverest.pojo.Usuario;
@@ -12,13 +13,10 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import static dev.serverest.api.Route.PRODUTOS;
-import static dev.serverest.api.Route.USUARIOS;
-import static dev.serverest.api.TokenManager.getToken;
 import static dev.serverest.utils.FakerUtils.*;
 import static dev.serverest.utils.LogUtils.logInfo;
 
-public class ProdutosAPI {
-    private static ThreadLocal<String> bearerToken = new ThreadLocal<>();
+public class ProdutosAPI extends TokenManager {
 
     public static Response get() {
         return RestResource.get(PRODUTOS);

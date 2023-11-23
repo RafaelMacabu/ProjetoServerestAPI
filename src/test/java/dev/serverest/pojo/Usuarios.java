@@ -8,7 +8,7 @@ import lombok.extern.jackson.Jacksonized;
 
 import java.util.List;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_DEFAULT)
 @Getter
 @Setter
 @Builder

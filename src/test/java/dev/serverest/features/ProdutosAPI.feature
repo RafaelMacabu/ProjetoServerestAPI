@@ -19,6 +19,10 @@ Funcionalidade: Cenarios de teste de produtos
     Quando eu fizer um GET na API de produtos com o id
     Entao a quantidade de produtos encontrados sera 1
 
+  Cenario: Procurando um produto
+    Quando eu fizer um GET na API de produtos
+    Entao o status code sera 200
+
   @CriandoUsuario
   @CriandoProduto
   Cenario: Editando um produto pre-existente

@@ -23,10 +23,14 @@ Funcionalidade: Cenarios de teste de usuarios
     Entao o status code sera 200
 
   @CriandoUsuario
-  Cenario: Achando um usuario
+  Cenario: Achando um usuario com o id
     Dado que eu tenho uma conta ja cadastrada
     Quando eu fizer um GET na API de cadastro com o id
     Entao a quantidade de usuarios encontrados sera 1
+
+  Cenario: Achando usuarios
+    Quando eu fizer um GET na API de cadastro
+    Entao o status code sera 200
 
 
 

@@ -2,6 +2,7 @@ package dev.serverest.stepdef;
 
 import dev.serverest.api.applicationAPI.ProdutosAPI;
 import dev.serverest.api.applicationAPI.UsuariosAPI;
+import dev.serverest.services.BaseService;
 import dev.serverest.services.ProdutosService;
 import dev.serverest.services.UsuarioService;
 import dev.serverest.utils.ScenarioUtils;

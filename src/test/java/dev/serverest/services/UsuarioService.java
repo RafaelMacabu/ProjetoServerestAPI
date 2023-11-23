@@ -19,9 +19,12 @@ public class UsuarioService extends BaseService {
     @Getter
     public static ThreadLocal<Usuario> responseAsClass = new ThreadLocal<>();
     private static ThreadLocal<Usuarios> responseAsClassList = new ThreadLocal<>();
-    private static ThreadLocal<Usuario> requestUsuario = new ThreadLocal<>();
     @Getter
-    public static ThreadLocal<String> idUsuario = new ThreadLocal<>();
+    @Setter
+    protected static ThreadLocal<Usuario> requestUsuario = new ThreadLocal<>();
+    @Getter
+    @Setter
+    protected static ThreadLocal<String> idUsuario = new ThreadLocal<>();
 
     public UsuarioService action() {
         return this;

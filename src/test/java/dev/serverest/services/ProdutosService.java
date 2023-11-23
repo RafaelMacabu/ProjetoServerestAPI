@@ -4,6 +4,9 @@ import dev.serverest.api.applicationAPI.ProdutosAPI;
 import dev.serverest.api.applicationAPI.UsuariosAPI;
 import dev.serverest.pojo.*;
 import lombok.Getter;
+import lombok.Setter;
+
+import java.util.List;
 
 import static dev.serverest.api.applicationAPI.ProdutosAPI.*;
 import static dev.serverest.api.applicationAPI.UsuariosAPI.generateRandomUser;
@@ -13,12 +16,15 @@ import static dev.serverest.services.Assertions.assertEquals;
 import static dev.serverest.utils.LogUtils.logInfo;
 
 public class ProdutosService extends BaseService {
-    private static ThreadLocal<Produto> requestProduto = new ThreadLocal<>();
     @Getter
     private static ThreadLocal<Produto> responseAsClass = new ThreadLocal<>();
     private static ThreadLocal<Produtos> responseAsClassList = new ThreadLocal<>();
     @Getter
-    private static ThreadLocal<String> idProduto = new ThreadLocal<>();
+    @Setter
+    protected static ThreadLocal<Produto> requestProduto = new ThreadLocal<>();
+    @Getter
+    @Setter
+    protected static ThreadLocal<String> idProduto = new ThreadLocal<>();
 
     public ProdutosService action() {
         return this;

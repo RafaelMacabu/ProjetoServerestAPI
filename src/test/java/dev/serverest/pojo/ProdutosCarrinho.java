@@ -12,13 +12,12 @@ import lombok.extern.jackson.Jacksonized;
 @Jacksonized
 @AllArgsConstructor
 @NoArgsConstructor
-public class Login {
-    @JsonProperty("email")
-    private String email;
-    @JsonProperty("password")
-    private String password;
-    @JsonProperty("message")
-    private String message;
-    @JsonProperty("authorization")
-    private String authorization;
+@ToString
+public class ProdutosCarrinho {
+    @JsonProperty("idProduto")
+    private String idProduto;
+    @JsonProperty("quantidade")
+    private int quantidade;
+    @JsonProperty("precoUnitario")
+    private String precoUnitario;
 }

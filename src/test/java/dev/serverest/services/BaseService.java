@@ -1,5 +1,7 @@
 package dev.serverest.services;
 
+import dev.serverest.pojo.Produto;
+import dev.serverest.pojo.Usuario;
 import io.restassured.response.Response;
 import lombok.Getter;
 import lombok.Setter;

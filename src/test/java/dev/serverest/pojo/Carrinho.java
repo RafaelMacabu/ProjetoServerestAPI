@@ -8,7 +8,6 @@ import lombok.extern.jackson.Jacksonized;
 
 import java.util.List;
 
-
 @JsonInclude(JsonInclude.Include.NON_DEFAULT)
 @Getter
 @Setter
@@ -16,19 +15,18 @@ import java.util.List;
 @Jacksonized
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
-//@JsonIgnoreProperties(ignoreUnknown = true)
-public class Usuario {
-    @JsonProperty("email")
-    private String email;
-    @JsonProperty("password")
-    private String password;
-    @JsonProperty("nome")
-    private String nome;
-    @JsonProperty("administrador")
-    private String administrador;
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Carrinho {
+    @JsonProperty("produtos")
+    private List<ProdutosCarrinho> produtos;
+    @JsonProperty("precoTotal")
+    private int precoTotal;
+    @JsonProperty("quantidadeTotal")
+    private int quantidadeTotal;
+    @JsonProperty("idUsuario")
+    private String idUsuario;
     @JsonProperty("_id")
-    private String id;
+    private String idCarrinho;
     @JsonProperty("message")
     private String message;
 }
