@@ -4,6 +4,7 @@
 @TestCarrinho
 Funcionalidade: Cenarios de teste de carrinho
 
+  @CriandoCarrinho
   @CriandoUsuario
   @CriandoProduto
   Cenario: Cadastrando um produto no carrinho

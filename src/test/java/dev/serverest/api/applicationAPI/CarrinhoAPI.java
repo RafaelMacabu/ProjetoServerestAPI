@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 import static dev.serverest.api.Route.CARRINHOS;
+import static dev.serverest.api.Route.PRODUTOS;
 
 public class CarrinhoAPI extends TokenManager {
 
@@ -31,6 +32,12 @@ public class CarrinhoAPI extends TokenManager {
 
     public static Response post(Carrinho requestProduto) {
         return RestResource.post(CARRINHOS, bearerToken.get(), requestProduto);
+    }
+
+    public static void delete() {
+        if (bearerToken != null){
+            RestResource.delete(CARRINHOS + "/cancelar-compra", bearerToken.get());
+        }
     }
 
     public static Carrinho carrinhoBuilder(){

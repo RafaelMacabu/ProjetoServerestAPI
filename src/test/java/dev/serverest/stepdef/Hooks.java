@@ -1,8 +1,10 @@
 package dev.serverest.stepdef;
 
+import dev.serverest.api.applicationAPI.CarrinhoAPI;
 import dev.serverest.api.applicationAPI.ProdutosAPI;
 import dev.serverest.api.applicationAPI.UsuariosAPI;
 import dev.serverest.services.BaseService;
+import dev.serverest.services.CarrinhoService;
 import dev.serverest.services.ProdutosService;
 import dev.serverest.services.UsuarioService;
 import dev.serverest.utils.ScenarioUtils;
@@ -21,6 +23,13 @@ public class Hooks {
     @After(order = 9999)
     public void after() {
         ScenarioUtils.remove();
+    }
+
+    @After(value = "@CriandoCarrinho",order = 3)
+    public void deletarCarrinho(){
+        if (CarrinhoService.getResponseAsClass().get() != null) {
+            CarrinhoAPI.delete();
+        }
     }
 
     @After(value = "@CriandoProduto",order = 2)

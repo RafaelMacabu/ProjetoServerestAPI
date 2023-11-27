@@ -23,7 +23,7 @@ public class FakerUtils {
 
     public static String generateProductName(){
         Faker faker = new Faker();
-        return "Placa Nvidia" + faker.regexify("[0-9]{4}") + " GTX";
+        return "Placa Nvidia " + faker.regexify("[0-9]{4}") + " GTX";
     }
 
     public static String generatePrice(){

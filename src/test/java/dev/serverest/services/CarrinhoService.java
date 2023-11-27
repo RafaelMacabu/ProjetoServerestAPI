@@ -16,6 +16,7 @@ import static dev.serverest.services.UsuarioService.idUsuario;
 import static dev.serverest.services.UsuarioService.requestUsuario;
 
 public class CarrinhoService extends BaseService {
+    @Getter
     private static ThreadLocal<Carrinho> responseAsClass = new ThreadLocal<>();
     private static ThreadLocal<Carrinhos> responseAsClassList = new ThreadLocal<>();
 
