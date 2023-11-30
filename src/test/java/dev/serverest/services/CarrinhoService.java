@@ -7,6 +7,8 @@ import dev.serverest.api.applicationAPI.UsuariosAPI;
 import dev.serverest.pojo.*;
 import lombok.Getter;
 
+import java.util.ArrayList;
+
 import static dev.serverest.api.applicationAPI.ProdutosAPI.generateRandomProduct;
 import static dev.serverest.api.applicationAPI.UsuariosAPI.generateRandomUser;
 import static dev.serverest.api.applicationAPI.UsuariosAPI.logResponse;
@@ -24,37 +26,21 @@ public class CarrinhoService extends BaseService {
         return this;
     }
 
-    /*public CarrinhoService criarUsuario() {
-        requestUsuario.set(generateRandomUser());
-        return this;
-    }*/
-
-    public CarrinhoService criarProduto() {
-        requestProduto.set(generateRandomProduct());
-        return this;
-    }
-
-    /*public CarrinhoService cadastrarUsuario() {
-        response.set(UsuariosAPI.post(requestUsuario.get()));
-        UsuarioService.getResponseAsClass().set(response.get().as(Usuario.class));
-        idUsuario.set(UsuarioService.getResponseAsClass().get().getId());
-        UsuariosAPI.logResponse(UsuarioService.getResponseAsClass().get());
-        TokenManager.getToken()
-        return this;
-    }*/
-
     public CarrinhoService cadastrarProduto() {
-        response.set(ProdutosAPI.post(requestProduto.get(), generateRandomUser()));
-        ProdutosService.getResponseAsClass().set(response.get().as(Produto.class));
-        idProduto.set(ProdutosService.getResponseAsClass().get().getId());
-        ProdutosAPI.logResponse(ProdutosService.getResponseAsClass().get());
-        return this;
-    }
+        if (TokenManager.getBearerToken().get() == null){
+            UsuariosAPI.postBearer(generateRandomUser());
+        }
 
-    public CarrinhoService cadastroCompleto(){
-        action().
-                criarProduto().
-                cadastrarProduto();
+        requestProduto.set(generateRandomProduct());
+        response.set(ProdutosAPI.post(requestProduto.get()));
+        ProdutosService.getResponseAsClass().set(response.get().as(Produto.class));
+
+        if (ProdutosService.getIdProduto().get() == null){
+            ProdutosService.getIdProduto().set(new ArrayList<>());
+        }
+        ProdutosService.getIdProduto().get().add(ProdutosService.getResponseAsClass().get().getId());
+
+        ProdutosAPI.logResponse(ProdutosService.getResponseAsClass().get());
         return this;
     }
 

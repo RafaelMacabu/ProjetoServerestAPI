@@ -13,10 +13,11 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import static dev.serverest.api.Route.PRODUTOS;
+import static dev.serverest.api.TokenManager.getToken;
 import static dev.serverest.utils.FakerUtils.*;
 import static dev.serverest.utils.LogUtils.logInfo;
 
-public class ProdutosAPI extends TokenManager {
+public class ProdutosAPI{
 
     public static Response get() {
         return RestResource.get(PRODUTOS);
@@ -32,19 +33,23 @@ public class ProdutosAPI extends TokenManager {
         return RestResource.post(PRODUTOS, bearer, requestProduto);
     }
 
+    public static Response post(Produto requestProduto) {
+        return RestResource.post(PRODUTOS,TokenManager.getBearerToken().get(), requestProduto);
+    }
+
     public static Response post(Produto requestProduto, Usuario requestUsuario) {
-        bearerToken.set(getToken(requestUsuario));
-        return RestResource.post(PRODUTOS, bearerToken.get(), requestProduto);
+        TokenManager.getBearerToken().set(getToken(requestUsuario));
+        return RestResource.post(PRODUTOS, TokenManager.getBearerToken().get(), requestProduto);
     }
 
     public static void delete(String productId) {
-        if (bearerToken != null){
-            RestResource.delete(PRODUTOS + "/" + productId, bearerToken.get());
+        if (TokenManager.getBearerToken().get() != null){
+            RestResource.delete(PRODUTOS + "/" + productId, TokenManager.getBearerToken().get());
         }
     }
 
     public static Response put(Produto requestProduto, String productId) {
-        return RestResource.put(PRODUTOS + "/" + productId, requestProduto,bearerToken.get());
+        return RestResource.put(PRODUTOS + "/" + productId, requestProduto,TokenManager.getBearerToken().get());
     }
 
     public static Produto produtoBuilder(String nome, double preco, String descricao, int quantidade) {

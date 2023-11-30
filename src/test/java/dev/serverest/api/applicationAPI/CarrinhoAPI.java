@@ -16,7 +16,6 @@ import java.util.List;
 import java.util.Map;
 
 import static dev.serverest.api.Route.CARRINHOS;
-import static dev.serverest.api.Route.PRODUTOS;
 
 public class CarrinhoAPI extends TokenManager {
 
@@ -48,12 +47,14 @@ public class CarrinhoAPI extends TokenManager {
 
     public static List<ProdutosCarrinho> produtosCarrinhoBuilder(){
         List<ProdutosCarrinho> list = new ArrayList<>();
-        list.add(ProdutosCarrinho.builder().
-                idProduto(ProdutosService.getIdProduto().get()).
-                quantidade(1).
-                build());
+        for (String produto: ProdutosService.getIdProduto().get()) {
+            list.add(ProdutosCarrinho.builder().
+                    idProduto(produto).
+                    quantidade(1).
+                    build());
+        }
         /*list.add(ProdutosCarrinho.builder().
-                idProduto(ProdutosService.getIdProduto().get()).
+                idProduto(ProdutosService.getIdProduto().get().get(0)).
                 quantidade(1).
                 build());*/
         return list;

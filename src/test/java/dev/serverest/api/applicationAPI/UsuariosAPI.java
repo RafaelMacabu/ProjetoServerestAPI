@@ -1,6 +1,7 @@
 package dev.serverest.api.applicationAPI;
 
 import dev.serverest.api.RestResource;
+import dev.serverest.api.TokenManager;
 import dev.serverest.pojo.Usuario;
 import dev.serverest.pojo.Usuarios;
 import io.restassured.response.Response;
@@ -11,6 +12,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import static dev.serverest.api.Route.USUARIOS;
+import static dev.serverest.api.TokenManager.getToken;
 import static dev.serverest.utils.FakerUtils.*;
 import static dev.serverest.utils.LogUtils.logInfo;
 
@@ -27,6 +29,11 @@ public class UsuariosAPI {
 
     public static Response post(Usuario requestUsuario) {
         return RestResource.post(USUARIOS, requestUsuario);
+    }
+
+    public static void postBearer(Usuario requestUsuario){
+        TokenManager.getBearerToken().set(getToken(requestUsuario));
+        //bearerToken.set(getToken(requestUsuario));
     }
 
     public static Response delete(String userId){

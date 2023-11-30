@@ -1,11 +1,13 @@
 package dev.serverest.services;
 
+import dev.serverest.api.TokenManager;
 import dev.serverest.api.applicationAPI.ProdutosAPI;
 import dev.serverest.api.applicationAPI.UsuariosAPI;
 import dev.serverest.pojo.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static dev.serverest.api.applicationAPI.ProdutosAPI.*;
@@ -24,7 +26,7 @@ public class ProdutosService extends BaseService {
     protected static ThreadLocal<Produto> requestProduto = new ThreadLocal<>();
     @Getter
     @Setter
-    protected static ThreadLocal<String> idProduto = new ThreadLocal<>();
+    protected static ThreadLocal<List<String>> idProduto = new ThreadLocal<>();
 
     public ProdutosService action() {
         return this;
@@ -36,11 +38,21 @@ public class ProdutosService extends BaseService {
         return this;
     }
 
-    public void cadastrarProduto() {
-        response.set(ProdutosAPI.post(requestProduto.get(), generateRandomUser()));
+    public ProdutosService cadastrarProduto() {
+        if (TokenManager.getBearerToken().get() == null){
+            UsuariosAPI.postBearer(generateRandomUser());
+        }
+
+        response.set(ProdutosAPI.post(requestProduto.get()));
         responseAsClass.set(response.get().as(Produto.class));
-        idProduto.set(responseAsClass.get().getId());
+
+        if (ProdutosService.getIdProduto().get() == null){
+            ProdutosService.getIdProduto().set(new ArrayList<>());
+        }
+        ProdutosService.getIdProduto().get().add(responseAsClass.get().getId());
+
         logResponse(responseAsClass.get());
+        return this;
     }
 
     public void acharUsuarios(){

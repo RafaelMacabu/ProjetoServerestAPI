@@ -1,5 +1,6 @@
 package dev.serverest.stepdef;
 
+import dev.serverest.api.TokenManager;
 import dev.serverest.api.applicationAPI.CarrinhoAPI;
 import dev.serverest.api.applicationAPI.ProdutosAPI;
 import dev.serverest.api.applicationAPI.UsuariosAPI;
@@ -35,7 +36,9 @@ public class Hooks {
     @After(value = "@CriandoProduto",order = 2)
     public void deletarProduto(){
         if (ProdutosService.getResponseAsClass().get() != null) {
-            ProdutosAPI.delete(ProdutosService.getIdProduto().get());
+            for (String produto: ProdutosService.getIdProduto().get()) {
+                ProdutosAPI.delete(produto);
+            }
         }
     }
 
@@ -43,6 +46,13 @@ public class Hooks {
     public void deletarUsuario(){
         if (UsuarioService.getResponseAsClass().get() != null) {
             UsuariosAPI.delete(UsuarioService.getIdUsuario().get());
+        }
+    }
+
+    @After(order = 0)
+    public void setBearerTokenToNull(){
+        if (TokenManager.getBearerToken().get() != null) {
+            TokenManager.getBearerToken().set(null);
         }
     }
 }

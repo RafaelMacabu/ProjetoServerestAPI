@@ -10,7 +10,7 @@ public class CarrinhoStepDef {
     @Dado("que quero adicionar um produto a um carrinho")
     public void queQueroAdicionarUmProdutoAUmCarrinho() {
         service.action().
-                cadastroCompleto();
+                cadastrarProduto();
     }
 
     @Quando("^eu fizer um (POST|GET) na API de (carrinho|carrinho com o id)$")
