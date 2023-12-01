@@ -4,9 +4,6 @@
 @TestCarrinho
 Funcionalidade: Cenarios de teste de carrinho
 
-  @CriandoCarrinho
-  @CriandoUsuario
-  @CriandoProduto
   Cenario: Cadastrando um produto no carrinho
     Dado que quero adicionar um produto a um carrinho
     Quando eu fizer um POST na API de carrinho

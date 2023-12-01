@@ -78,23 +78,29 @@ font-src * data: blob: 'unsafe-inline';"/>
   "data": {
     "labels": [
       "dev.serverest.stepdef.Hooks.before(io.cucumber.java.Scenario)",
-      "que eu tenho uma conta ja cadastrada",
-      "eu fizer um GET na API de cadastro com o id",
-      "a quantidade de usuarios encontrados sera 1",
+      "que tenho um produto ja cadastrado",
+      "eu fizer um PUT na API de produtos",
+      "o status code sera 200",
+      "dev.serverest.stepdef.Hooks.after()",
+      "dev.serverest.stepdef.Hooks.deletarProduto()",
       "dev.serverest.stepdef.Hooks.deletarUsuario()",
-      "dev.serverest.stepdef.Hooks.after()"
+      "dev.serverest.stepdef.Hooks.setBearerTokenToNull()"
     ],
     "datasets": [
       {
         "data": [
           0,
-          3,
+          5,
+          0,
+          0,
           0,
           0,
           0,
           0
         ],
         "backgroundColor": [
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
           "rgba(40, 167, 69, 1.000)",
           "rgba(40, 167, 69, 1.000)",
           "rgba(40, 167, 69, 1.000)",
@@ -112,9 +118,13 @@ font-src * data: blob: 'unsafe-inline';"/>
           0,
           0,
           0,
+          0,
+          0,
           0
         ],
         "backgroundColor": [
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
           "rgba(220, 53, 69, 1.000)",
           "rgba(220, 53, 69, 1.000)",
           "rgba(220, 53, 69, 1.000)",
@@ -132,9 +142,13 @@ font-src * data: blob: 'unsafe-inline';"/>
           0,
           0,
           0,
+          0,
+          0,
           0
         ],
         "backgroundColor": [
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
           "rgba(255, 193, 7, 1.000)",
           "rgba(255, 193, 7, 1.000)",
           "rgba(255, 193, 7, 1.000)",
@@ -168,7 +182,7 @@ font-src * data: blob: 'unsafe-inline';"/>
         {
           "ticks": {
             "min": 0,
-            "stepSize": 3,
+            "stepSize": 5,
             "display": true
           },
           "stacked": true,
@@ -271,14 +285,14 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <a class="nav-link " href="pages/feature-summary.html">All Features</a>
                     </li>
             </ul>
-            <span class="text-light">2023-11-20 03:13:05</span>
+            <span class="text-light">2023-11-30 15:58:11</span>
         </div>
     </nav>
     <main role="main" class="container">
         <div class="cluecumber-template">
             <div class="pb-2 mt-4 mb-2 border-bottom">
-                        <h5><a href="pages/feature-scenarios/feature_2.html">Cenarios de teste de usuarios</a></h5>
-                    <h3>Achando um usuario</h3>
+                        <h5><a href="pages/feature-scenarios/feature_2.html">Cenarios de teste de produtos</a></h5>
+                    <h3>Editando um produto pre-existente</h3>
             </div>
 
     <div class="row" id="scenario-detail">
@@ -296,15 +310,17 @@ font-src * data: blob: 'unsafe-inline';"/>
         <div class="card h-100">
                 <div class="card-header">Scenario Info</div>
             <div class="card-body">
-                <li class="list-group-item">Started on:<br>2023-11-20 03:12:41</li>
-                <li class="list-group-item">Ended on:<br>2023-11-20 03:12:45</li>
-            <li class="list-group-item">Test Runtime:<br>0m 04s 072ms</li>
+                <li class="list-group-item">Started on:<br>2023-11-30 15:57:38</li>
+                <li class="list-group-item">Ended on:<br>2023-11-30 15:57:45</li>
+            <li class="list-group-item">Test Runtime:<br>0m 06s 445ms</li>
             <li class="list-group-item">
                     <a href="pages/tag-scenarios/tag_Test.html">@Test</a>,
 
-                    <a href="pages/tag-scenarios/tag_TesteUsuarios.html">@TesteUsuarios</a>,
+                    <a href="pages/tag-scenarios/tag_TesteProdutos.html">@TesteProdutos</a>,
 
-                    <a href="pages/tag-scenarios/tag_CriandoUsuario.html">@CriandoUsuario</a>            </li>
+                    <a href="pages/tag-scenarios/tag_CriandoUsuario.html">@CriandoUsuario</a>,
+
+                    <a href="pages/tag-scenarios/tag_CriandoProduto.html">@CriandoProduto</a>            </li>
             </div>
         </div>
     </div>
@@ -352,7 +368,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <i>dev.serverest.stepdef.Hooks.before(io.cucumber.java.Scenario)</i>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 002ms
+                                0m 00s 000ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -374,12 +390,12 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-1 text-left small">1.</div>
                             <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="dev.serverest.stepdef.UsuarioStepDef.tenho_Uma_Conta_Ja_Cadastrada()">
-                                    <a href="pages/step-scenarios/step_1050598309.html"><span class="keyword">Dado </span> que eu tenho uma conta ja cadastrada</a>
+                                <span data-toggle="tooltip" title="dev.serverest.stepdef.ProdutoStepDef.queTenhoUmProdutoJaCriado()">
+                                    <a href="pages/step-scenarios/step_01473307246.html"><span class="keyword">Dado </span> que tenho um produto ja cadastrado</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 03s 302ms
+                                0m 05s 421ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -388,7 +404,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
         <div class="row w-100 p-3 m-0 scenarioOutput">
             <div class="w-100 text-left small p-2">
-                ========== REQUEST BODY ==========<br>Nome: Patricia Carneiro<br>Email: PatriciaCarneiro415@qa.com<br>Senha: 7p9o5a6m<br>Admin: true<br>==================================<br>========== RESPONSE BODY ==========<br>Mensagem: Cadastro realizado com sucesso<br>Id: L3eBFz6OenDEpGt1<br>===================================
+                ========== REQUEST BODY ==========<br>Nome: Placa Nvidia 2585 GTX<br>Preço: 299.0<br>Descrição: Placa de video<br>Quantidade: 115<br>==================================<br>========== RESPONSE BODY ==========<br>Mensagem: Cadastro realizado com sucesso<br>Id: ld8l4sczZuf2xtrP<br>===================================
             </div>
         </div>
                         </div>
@@ -397,12 +413,12 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-1 text-left small">2.</div>
                             <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="dev.serverest.stepdef.UsuarioStepDef.eu_fizer_um_POST_na_API_de_cadastro(java.lang.String,java.lang.String)">
-                                    <a href="pages/step-scenarios/step_0428145114.html"><span class="keyword">Quando </span> eu fizer um <span class="parameter">GET</span> na API de <span class="parameter">cadastro com o id</span></a>
+                                <span data-toggle="tooltip" title="dev.serverest.stepdef.ProdutoStepDef.eu_fizer_um_post_na_api_de_produtos(java.lang.String,java.lang.String)">
+                                    <a href="pages/step-scenarios/step_745503376.html"><span class="keyword">Quando </span> eu fizer um <span class="parameter">PUT</span> na API de <span class="parameter">produtos</span></a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 454ms
+                                0m 00s 348ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -411,7 +427,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
         <div class="row w-100 p-3 m-0 scenarioOutput">
             <div class="w-100 text-left small p-2">
-                ========== RESPONSE BODY ==========<br>Quantidade: 1<br>Usuarios: [Usuario(email=PatriciaCarneiro415@qa.com, password=7p9o5a6m, nome=Patricia Carneiro, administrador=true, id=L3eBFz6OenDEpGt1, message=null)]<br>===================================
+                ========== REQUEST BODY ==========<br>Nome: Placa Nvidia 5870 GTX<br>Preço: 838.0<br>Descrição: Placa de video<br>Quantidade: 150<br>==================================<br>========== RESPONSE BODY ==========<br>Mensagem: Registro alterado com sucesso<br>===================================
             </div>
         </div>
                         </div>
@@ -420,8 +436,8 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-1 text-left small">3.</div>
                             <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="dev.serverest.stepdef.UsuarioStepDef.a_Quantidade_De_Usuarios_Achados_Sera(int)">
-                                    <a href="pages/step-scenarios/step_1134948383.html"><span class="keyword">Entao </span> a quantidade de usuarios encontrados sera <span class="parameter">1</span></a>
+                                <span data-toggle="tooltip" title="dev.serverest.stepdef.CommonStepDef.o_status_code_sera(java.lang.Integer)">
+                                    <a href="pages/step-scenarios/step_1809871351.html"><span class="keyword">Entao </span> o status code sera <span class="parameter">200</span></a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
@@ -434,7 +450,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
         <div class="row w-100 p-3 m-0 scenarioOutput">
             <div class="w-100 text-left small p-2">
-                Quantidade de usuarios encontrados: 1
+                Status: 200
             </div>
         </div>
                         </div>
@@ -452,10 +468,10 @@ font-src * data: blob: 'unsafe-inline';"/>
                             <div class="row row_passed table-row-passed">
                                 <div class="col-1 text-left small">1.</div>
                                 <div class="col-8 text-left">
-                                    <i>dev.serverest.stepdef.Hooks.deletarUsuario()</i>
+                                    <i>dev.serverest.stepdef.Hooks.after()</i>
                                 </div>
                                 <div class="col-2 text-left small">
-                                    0m 00s 311ms
+                                    0m 00s 000ms
                                 </div>
                                 <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -465,7 +481,33 @@ font-src * data: blob: 'unsafe-inline';"/>
                             <div class="row row_passed table-row-passed">
                                 <div class="col-1 text-left small">2.</div>
                                 <div class="col-8 text-left">
-                                    <i>dev.serverest.stepdef.Hooks.after()</i>
+                                    <i>dev.serverest.stepdef.Hooks.deletarProduto()</i>
+                                </div>
+                                <div class="col-2 text-left small">
+                                    0m 00s 331ms
+                                </div>
+                                <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                                </div>
+                            </div>
+                            <div class="row row_passed table-row-passed">
+                                <div class="col-1 text-left small">3.</div>
+                                <div class="col-8 text-left">
+                                    <i>dev.serverest.stepdef.Hooks.deletarUsuario()</i>
+                                </div>
+                                <div class="col-2 text-left small">
+                                    0m 00s 344ms
+                                </div>
+                                <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                                </div>
+                            </div>
+                            <div class="row row_passed table-row-passed">
+                                <div class="col-1 text-left small">4.</div>
+                                <div class="col-8 text-left">
+                                    <i>dev.serverest.stepdef.Hooks.setBearerTokenToNull()</i>
                                 </div>
                                 <div class="col-2 text-left small">
                                     0m 00s 000ms
@@ -486,7 +528,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span>Cluecumber Report Plugin version 2.3.4 - Report generated on 2023-11-20 03:13:05.</span>
+        <span>Cluecumber Report Plugin version 2.3.4 - Report generated on 2023-11-30 15:58:11.</span>
     </div>
 </footer>    </body>
     </html>

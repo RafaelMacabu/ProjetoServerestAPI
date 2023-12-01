@@ -22,30 +22,32 @@ public class CarrinhoService extends BaseService {
     private static ThreadLocal<Carrinho> responseAsClass = new ThreadLocal<>();
     private static ThreadLocal<Carrinhos> responseAsClassList = new ThreadLocal<>();
 
+
     public CarrinhoService action(){
         return this;
     }
 
     public CarrinhoService cadastrarProduto() {
-        if (TokenManager.getBearerToken().get() == null){
+        if (TokenManager.getBearerToken() == null){
             UsuariosAPI.postBearer(generateRandomUser());
         }
 
         requestProduto.set(generateRandomProduct());
         response.set(ProdutosAPI.post(requestProduto.get()));
-        ProdutosService.getResponseAsClass().set(response.get().as(Produto.class));
+        ProdutosService.setResponseAsClass(response.get().as(Produto.class));
 
-        if (ProdutosService.getIdProduto().get() == null){
-            ProdutosService.getIdProduto().set(new ArrayList<>());
-        }
-        ProdutosService.getIdProduto().get().add(ProdutosService.getResponseAsClass().get().getId());
+        ProdutosService.getIdProduto().add(ProdutosService.getResponseAsClass().getId());
 
-        ProdutosAPI.logResponse(ProdutosService.getResponseAsClass().get());
+        ProdutosAPI.logResponse(ProdutosService.getResponseAsClass());
         return this;
     }
 
     public void cadastrarCarrinho(){
         response.set(CarrinhoAPI.post(CarrinhoAPI.carrinhoBuilder()));
         responseAsClass.set(response.get().as(Carrinho.class));
+    }
+
+    public static Carrinho getResponseAsClass() {
+        return responseAsClass.get();
     }
 }

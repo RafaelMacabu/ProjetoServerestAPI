@@ -32,8 +32,7 @@ public class UsuariosAPI {
     }
 
     public static void postBearer(Usuario requestUsuario){
-        TokenManager.getBearerToken().set(getToken(requestUsuario));
-        //bearerToken.set(getToken(requestUsuario));
+        TokenManager.setBearerToken(getToken(requestUsuario));
     }
 
     public static Response delete(String userId){

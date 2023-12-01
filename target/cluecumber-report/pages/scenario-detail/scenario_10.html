@@ -78,10 +78,11 @@ font-src * data: blob: 'unsafe-inline';"/>
   "data": {
     "labels": [
       "dev.serverest.stepdef.Hooks.before(io.cucumber.java.Scenario)",
-      "que eu tenho uma conta nao cadastrada",
-      "eu fizer um POST na API de login",
-      "o status code sera 401",
+      "que quero criar um produto",
+      "eu fizer um POST na API de produtos",
+      "o status code sera 201",
       "dev.serverest.stepdef.Hooks.after()",
+      "dev.serverest.stepdef.Hooks.deletarProduto()",
       "dev.serverest.stepdef.Hooks.deletarUsuario()",
       "dev.serverest.stepdef.Hooks.setBearerTokenToNull()"
     ],
@@ -90,13 +91,15 @@ font-src * data: blob: 'unsafe-inline';"/>
         "data": [
           0,
           0,
-          2,
+          5,
+          0,
           0,
           0,
           0,
           0
         ],
         "backgroundColor": [
+          "rgba(40, 167, 69, 1.000)",
           "rgba(40, 167, 69, 1.000)",
           "rgba(40, 167, 69, 1.000)",
           "rgba(40, 167, 69, 1.000)",
@@ -116,9 +119,11 @@ font-src * data: blob: 'unsafe-inline';"/>
           0,
           0,
           0,
+          0,
           0
         ],
         "backgroundColor": [
+          "rgba(220, 53, 69, 1.000)",
           "rgba(220, 53, 69, 1.000)",
           "rgba(220, 53, 69, 1.000)",
           "rgba(220, 53, 69, 1.000)",
@@ -138,9 +143,11 @@ font-src * data: blob: 'unsafe-inline';"/>
           0,
           0,
           0,
+          0,
           0
         ],
         "backgroundColor": [
+          "rgba(255, 193, 7, 1.000)",
           "rgba(255, 193, 7, 1.000)",
           "rgba(255, 193, 7, 1.000)",
           "rgba(255, 193, 7, 1.000)",
@@ -175,7 +182,7 @@ font-src * data: blob: 'unsafe-inline';"/>
         {
           "ticks": {
             "min": 0,
-            "stepSize": 2,
+            "stepSize": 5,
             "display": true
           },
           "stacked": true,
@@ -284,8 +291,8 @@ font-src * data: blob: 'unsafe-inline';"/>
     <main role="main" class="container">
         <div class="cluecumber-template">
             <div class="pb-2 mt-4 mb-2 border-bottom">
-                        <h5><a href="pages/feature-scenarios/feature_1.html">Cenarios de teste de login</a></h5>
-                    <h3>Falhando login com email/senha invalidos</h3>
+                        <h5><a href="pages/feature-scenarios/feature_2.html">Cenarios de teste de produtos</a></h5>
+                    <h3>Cadastrando um produto</h3>
             </div>
 
     <div class="row" id="scenario-detail">
@@ -304,14 +311,16 @@ font-src * data: blob: 'unsafe-inline';"/>
                 <div class="card-header">Scenario Info</div>
             <div class="card-body">
                 <li class="list-group-item">Started on:<br>2023-11-30 15:57:38</li>
-                <li class="list-group-item">Ended on:<br>2023-11-30 15:57:42</li>
-            <li class="list-group-item">Test Runtime:<br>0m 03s 714ms</li>
+                <li class="list-group-item">Ended on:<br>2023-11-30 15:57:45</li>
+            <li class="list-group-item">Test Runtime:<br>0m 06s 781ms</li>
             <li class="list-group-item">
                     <a href="pages/tag-scenarios/tag_Test.html">@Test</a>,
 
-                    <a href="pages/tag-scenarios/tag_TestLogin.html">@TestLogin</a>,
+                    <a href="pages/tag-scenarios/tag_TesteProdutos.html">@TesteProdutos</a>,
 
-                    <a href="pages/tag-scenarios/tag_CriandoUsuario.html">@CriandoUsuario</a>            </li>
+                    <a href="pages/tag-scenarios/tag_CriandoUsuario.html">@CriandoUsuario</a>,
+
+                    <a href="pages/tag-scenarios/tag_CriandoProduto.html">@CriandoProduto</a>            </li>
             </div>
         </div>
     </div>
@@ -359,7 +368,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <i>dev.serverest.stepdef.Hooks.before(io.cucumber.java.Scenario)</i>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 010ms
+                                0m 00s 003ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -381,12 +390,12 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-1 text-left small">1.</div>
                             <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="dev.serverest.stepdef.UsuarioStepDef.queEuTenhoUmaContaNaoCadastrada()">
-                                    <a href="pages/step-scenarios/step_01258952095.html"><span class="keyword">Dado </span> que eu tenho uma conta nao cadastrada</a>
+                                <span data-toggle="tooltip" title="dev.serverest.stepdef.ProdutoStepDef.que_quero_criar_um_produto()">
+                                    <a href="pages/step-scenarios/step_01167781670.html"><span class="keyword">Dado </span> que quero criar um produto</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 766ms
+                                0m 00s 127ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -395,7 +404,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
         <div class="row w-100 p-3 m-0 scenarioOutput">
             <div class="w-100 text-left small p-2">
-                ========== REQUEST BODY ==========<br>Nome: Vinicius da Fontoura<br>Email: ViniciusdaFontoura684@qa.com<br>Senha: 2n3b6c4o<br>Admin: true<br>==================================
+                ========== REQUEST BODY ==========<br>Nome: Placa Nvidia 4673 GTX<br>Preço: 971.0<br>Descrição: Placa de video<br>Quantidade: 113<br>==================================
             </div>
         </div>
                         </div>
@@ -404,30 +413,12 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-1 text-left small">2.</div>
                             <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="dev.serverest.stepdef.UsuarioStepDef.euFizerUmPOSTNaAPIDeLogin()">
-                                    <a href="pages/step-scenarios/step_0477311805.html"><span class="keyword">Quando </span> eu fizer um POST na API de login</a>
+                                <span data-toggle="tooltip" title="dev.serverest.stepdef.ProdutoStepDef.eu_fizer_um_post_na_api_de_produtos(java.lang.String,java.lang.String)">
+                                    <a href="pages/step-scenarios/step_745503376.html"><span class="keyword">Quando </span> eu fizer um <span class="parameter">POST</span> na API de <span class="parameter">produtos</span></a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 02s 775ms
-                            </div>
-                            <div class="col-1 text-right">
-    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
-       title="passed"><span style="display:none">passed</span></i>
-                            </div>
-
-                        </div>
-
-
-                        <div class="row row_passed table-row-passed">
-                            <div class="col-1 text-left small">3.</div>
-                            <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="dev.serverest.stepdef.CommonStepDef.o_status_code_sera(java.lang.Integer)">
-                                    <a href="pages/step-scenarios/step_1809871351.html"><span class="keyword">Entao </span> o status code sera <span class="parameter">401</span></a>
-                                </span>
-                            </div>
-                            <div class="col-2 text-left small">
-                                0m 00s 161ms
+                                0m 05s 983ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -436,7 +427,30 @@ font-src * data: blob: 'unsafe-inline';"/>
 
         <div class="row w-100 p-3 m-0 scenarioOutput">
             <div class="w-100 text-left small p-2">
-                Status: 401
+                ========== RESPONSE BODY ==========<br>Mensagem: Cadastro realizado com sucesso<br>Id: Xdj7u0RQROdtlkts<br>===================================
+            </div>
+        </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-1 text-left small">3.</div>
+                            <div class="col-8 text-left">
+                                <span data-toggle="tooltip" title="dev.serverest.stepdef.CommonStepDef.o_status_code_sera(java.lang.Integer)">
+                                    <a href="pages/step-scenarios/step_1809871351.html"><span class="keyword">Entao </span> o status code sera <span class="parameter">201</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+        <div class="row w-100 p-3 m-0 scenarioOutput">
+            <div class="w-100 text-left small p-2">
+                Status: 201
             </div>
         </div>
                         </div>
@@ -467,10 +481,10 @@ font-src * data: blob: 'unsafe-inline';"/>
                             <div class="row row_passed table-row-passed">
                                 <div class="col-1 text-left small">2.</div>
                                 <div class="col-8 text-left">
-                                    <i>dev.serverest.stepdef.Hooks.deletarUsuario()</i>
+                                    <i>dev.serverest.stepdef.Hooks.deletarProduto()</i>
                                 </div>
                                 <div class="col-2 text-left small">
-                                    0m 00s 000ms
+                                    0m 00s 345ms
                                 </div>
                                 <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -479,6 +493,19 @@ font-src * data: blob: 'unsafe-inline';"/>
                             </div>
                             <div class="row row_passed table-row-passed">
                                 <div class="col-1 text-left small">3.</div>
+                                <div class="col-8 text-left">
+                                    <i>dev.serverest.stepdef.Hooks.deletarUsuario()</i>
+                                </div>
+                                <div class="col-2 text-left small">
+                                    0m 00s 320ms
+                                </div>
+                                <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                                </div>
+                            </div>
+                            <div class="row row_passed table-row-passed">
+                                <div class="col-1 text-left small">4.</div>
                                 <div class="col-8 text-left">
                                     <i>dev.serverest.stepdef.Hooks.setBearerTokenToNull()</i>
                                 </div>

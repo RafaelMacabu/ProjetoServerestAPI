@@ -77,18 +77,21 @@ font-src * data: blob: 'unsafe-inline';"/>
             var chart = new Chart(ctx, {
   "data": {
     "labels": [
-      "Cenarios de teste de login",
       "Cenarios de teste de usuarios",
-      "Cenarios de teste de produtos"
+      "Cenarios de teste de login",
+      "Cenarios de teste de produtos",
+      "Cenarios de teste de carrinho"
     ],
     "datasets": [
       {
         "data": [
+          5,
           2,
           4,
-          2
+          1
         ],
         "backgroundColor": [
+          "rgba(40, 167, 69, 1.000)",
           "rgba(40, 167, 69, 1.000)",
           "rgba(40, 167, 69, 1.000)",
           "rgba(40, 167, 69, 1.000)"
@@ -99,9 +102,11 @@ font-src * data: blob: 'unsafe-inline';"/>
         "data": [
           0,
           0,
+          0,
           0
         ],
         "backgroundColor": [
+          "rgba(220, 53, 69, 1.000)",
           "rgba(220, 53, 69, 1.000)",
           "rgba(220, 53, 69, 1.000)",
           "rgba(220, 53, 69, 1.000)"
@@ -112,9 +117,11 @@ font-src * data: blob: 'unsafe-inline';"/>
         "data": [
           0,
           0,
+          0,
           0
         ],
         "backgroundColor": [
+          "rgba(255, 193, 7, 1.000)",
           "rgba(255, 193, 7, 1.000)",
           "rgba(255, 193, 7, 1.000)",
           "rgba(255, 193, 7, 1.000)"
@@ -135,7 +142,7 @@ font-src * data: blob: 'unsafe-inline';"/>
           "stacked": true,
           "scaleLabel": {
             "display": true,
-            "labelString": "3 Features"
+            "labelString": "4 Features"
           },
           "stepSize": 0.0
         }
@@ -144,7 +151,7 @@ font-src * data: blob: 'unsafe-inline';"/>
         {
           "ticks": {
             "min": 0,
-            "stepSize": 4,
+            "stepSize": 5,
             "display": true
           },
           "stacked": true,
@@ -247,7 +254,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <a class="nav-link text-white" href="pages/feature-summary.html">All Features</a>
                     </li>
             </ul>
-            <span class="text-light">2023-11-20 03:13:05</span>
+            <span class="text-light">2023-11-30 15:58:11</span>
         </div>
     </nav>
     <main role="main" class="container">
@@ -273,14 +280,14 @@ font-src * data: blob: 'unsafe-inline';"/>
             <div class="card-body">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">
-                    8         Scenarios
+                    12         Scenarios
 <br>
                     in
-                    3         Features
+                    4         Features
 
                 </li>
                 <li class="list-group-item">
-                    8 passed     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+                    12 passed     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
        title="passed"><span style="display:none">passed</span></i>
 
                     <br>
@@ -322,7 +329,16 @@ font-src * data: blob: 'unsafe-inline';"/>
                 <tbody>
                     <tr>
                         <td class="text-left"><a
-                                    href="pages/feature-scenarios/feature_0.html">Cenarios de teste de login</a>
+                                    href="pages/feature-scenarios/feature_3.html">Cenarios de teste de usuarios</a>
+                        </td>
+                        <td class="text-right"><strong>5</strong></td>
+                        <td class="text-right">5</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><a
+                                    href="pages/feature-scenarios/feature_1.html">Cenarios de teste de login</a>
                         </td>
                         <td class="text-right"><strong>2</strong></td>
                         <td class="text-right">2</td>
@@ -331,7 +347,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                     </tr>
                     <tr>
                         <td class="text-left"><a
-                                    href="pages/feature-scenarios/feature_2.html">Cenarios de teste de usuarios</a>
+                                    href="pages/feature-scenarios/feature_2.html">Cenarios de teste de produtos</a>
                         </td>
                         <td class="text-right"><strong>4</strong></td>
                         <td class="text-right">4</td>
@@ -340,10 +356,10 @@ font-src * data: blob: 'unsafe-inline';"/>
                     </tr>
                     <tr>
                         <td class="text-left"><a
-                                    href="pages/feature-scenarios/feature_1.html">Cenarios de teste de produtos</a>
+                                    href="pages/feature-scenarios/feature_0.html">Cenarios de teste de carrinho</a>
                         </td>
-                        <td class="text-right"><strong>2</strong></td>
-                        <td class="text-right">2</td>
+                        <td class="text-right"><strong>1</strong></td>
+                        <td class="text-right">1</td>
                         <td class="text-right">0</td>
                         <td class="text-right">0</td>
                     </tr>
@@ -358,7 +374,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span>Cluecumber Report Plugin version 2.3.4 - Report generated on 2023-11-20 03:13:05.</span>
+        <span>Cluecumber Report Plugin version 2.3.4 - Report generated on 2023-11-30 15:58:11.</span>
     </div>
 </footer>    </body>
     </html>

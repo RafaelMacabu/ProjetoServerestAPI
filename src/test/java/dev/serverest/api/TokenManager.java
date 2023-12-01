@@ -14,9 +14,8 @@ import static dev.serverest.api.applicationAPI.UsuariosAPI.usuariosBuilder;
 import static dev.serverest.services.UsuarioService.responseAsClass;
 
 public class TokenManager extends BaseService {
-    @Getter
-    @Setter
     protected static ThreadLocal<String> bearerToken = new ThreadLocal<>();
+
 
     public synchronized static String getToken(Usuario requestUsuario){
         try{
@@ -31,9 +30,17 @@ public class TokenManager extends BaseService {
     private static Response renewToken(Usuario requestUsuario){
         Response response = UsuariosAPI.post(requestUsuario);
         responseAsClass.set(response.as(Usuario.class));
-        UsuarioService.getIdUsuario().set(responseAsClass.get().getId());
+        UsuarioService.setIdUsuario(responseAsClass.get().getId());
         Login requestLogin = LoginAPI.loginBuilder(requestUsuario.getEmail(),requestUsuario.getPassword());
         Response responseLogin = LoginAPI.post(requestLogin);
         return responseLogin;
+    }
+
+    public static String getBearerToken() {
+        return bearerToken.get();
+    }
+
+    public static void setBearerToken(String bearer) {
+        bearerToken.set(bearer);
     }
 }

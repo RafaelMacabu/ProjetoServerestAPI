@@ -34,22 +34,22 @@ public class ProdutosAPI{
     }
 
     public static Response post(Produto requestProduto) {
-        return RestResource.post(PRODUTOS,TokenManager.getBearerToken().get(), requestProduto);
+        return RestResource.post(PRODUTOS,TokenManager.getBearerToken(), requestProduto);
     }
 
     public static Response post(Produto requestProduto, Usuario requestUsuario) {
-        TokenManager.getBearerToken().set(getToken(requestUsuario));
-        return RestResource.post(PRODUTOS, TokenManager.getBearerToken().get(), requestProduto);
+        TokenManager.setBearerToken(getToken(requestUsuario));
+        return RestResource.post(PRODUTOS, TokenManager.getBearerToken(), requestProduto);
     }
 
     public static void delete(String productId) {
-        if (TokenManager.getBearerToken().get() != null){
-            RestResource.delete(PRODUTOS + "/" + productId, TokenManager.getBearerToken().get());
+        if (TokenManager.getBearerToken() != null){
+            RestResource.delete(PRODUTOS + "/" + productId, TokenManager.getBearerToken());
         }
     }
 
     public static Response put(Produto requestProduto, String productId) {
-        return RestResource.put(PRODUTOS + "/" + productId, requestProduto,TokenManager.getBearerToken().get());
+        return RestResource.put(PRODUTOS + "/" + productId, requestProduto,TokenManager.getBearerToken());
     }
 
     public static Produto produtoBuilder(String nome, double preco, String descricao, int quantidade) {

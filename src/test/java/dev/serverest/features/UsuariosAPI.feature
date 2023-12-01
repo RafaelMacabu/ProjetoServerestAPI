@@ -4,25 +4,21 @@
 @TesteUsuarios
 Funcionalidade: Cenarios de teste de usuarios
 
-  @CriandoUsuario
   Cenario: Criando uma conta normal
     Dado que quero criar um usuario normal
     Quando eu fizer um POST na API de cadastro
     Entao o status code sera 201
 
-  @CriandoUsuario
   Cenario: Criando uma conta admin
     Dado que quero criar um usuario admin
     Quando eu fizer um POST na API de cadastro
     Entao o status code sera 201
 
-  @CriandoUsuario
   Cenario: Editando uma conta pre-existente
     Dado que eu tenho uma conta ja cadastrada
     Quando eu fizer um PUT na API de cadastro
     Entao o status code sera 200
 
-  @CriandoUsuario
   Cenario: Achando um usuario com o id
     Dado que eu tenho uma conta ja cadastrada
     Quando eu fizer um GET na API de cadastro com o id

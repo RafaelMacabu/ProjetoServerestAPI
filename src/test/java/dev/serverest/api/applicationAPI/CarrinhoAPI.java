@@ -47,7 +47,7 @@ public class CarrinhoAPI extends TokenManager {
 
     public static List<ProdutosCarrinho> produtosCarrinhoBuilder(){
         List<ProdutosCarrinho> list = new ArrayList<>();
-        for (String produto: ProdutosService.getIdProduto().get()) {
+        for (String produto: ProdutosService.getIdProduto()) {
             list.add(ProdutosCarrinho.builder().
                     idProduto(produto).
                     quantidade(1).
