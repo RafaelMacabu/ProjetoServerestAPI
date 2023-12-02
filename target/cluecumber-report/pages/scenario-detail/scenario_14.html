@@ -78,9 +78,9 @@ font-src * data: blob: 'unsafe-inline';"/>
   "data": {
     "labels": [
       "dev.serverest.stepdef.Hooks.before(io.cucumber.java.Scenario)",
-      "que eu tenho um carrinho com um produto já cadastrado",
-      "eu fizer um GET na API de carrinho com o id",
-      "a quantidade de carrinhos encontrados sera 1",
+      "que quero adicionar um produto a um carrinho",
+      "eu fizer um POST na API de carrinho",
+      "o status code sera 201",
       "dev.serverest.stepdef.Hooks.setBearerTokenToNull()",
       "dev.serverest.stepdef.Hooks.after()"
     ],
@@ -88,7 +88,7 @@ font-src * data: blob: 'unsafe-inline';"/>
       {
         "data": [
           0,
-          4,
+          7,
           0,
           0,
           0,
@@ -168,7 +168,7 @@ font-src * data: blob: 'unsafe-inline';"/>
         {
           "ticks": {
             "min": 0,
-            "stepSize": 4,
+            "stepSize": 7,
             "display": true
           },
           "stacked": true,
@@ -278,7 +278,7 @@ font-src * data: blob: 'unsafe-inline';"/>
         <div class="cluecumber-template">
             <div class="pb-2 mt-4 mb-2 border-bottom">
                         <h5><a href="pages/feature-scenarios/feature_0.html">Cenarios de teste de carrinho</a></h5>
-                    <h3>Procurando um carrinho pelo ID</h3>
+                    <h3>Cadastrando um produto no carrinho</h3>
             </div>
 
     <div class="row" id="scenario-detail">
@@ -297,8 +297,8 @@ font-src * data: blob: 'unsafe-inline';"/>
                 <div class="card-header">Scenario Info</div>
             <div class="card-body">
                 <li class="list-group-item">Started on:<br>2023-12-02 04:12:34</li>
-                <li class="list-group-item">Ended on:<br>2023-12-02 04:12:40</li>
-            <li class="list-group-item">Test Runtime:<br>0m 06s 124ms</li>
+                <li class="list-group-item">Ended on:<br>2023-12-02 04:12:42</li>
+            <li class="list-group-item">Test Runtime:<br>0m 08s 496ms</li>
             <li class="list-group-item">
                     <a href="pages/tag-scenarios/tag_Test.html">@Test</a>,
 
@@ -372,12 +372,12 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-1 text-left small">1.</div>
                             <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="dev.serverest.stepdef.CarrinhoStepDef.queEuTenhoUmCarrinhoJáCadastrado()">
-                                    <a href="pages/step-scenarios/step_1825598650.html"><span class="keyword">Dado </span> que eu tenho um carrinho com um produto já cadastrado</a>
+                                <span data-toggle="tooltip" title="dev.serverest.stepdef.CarrinhoStepDef.queQueroAdicionarUmProdutoAUmCarrinho()">
+                                    <a href="pages/step-scenarios/step_01357617111.html"><span class="keyword">Dado </span> que quero adicionar um produto a um carrinho</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 04s 865ms
+                                0m 07s 228ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -386,7 +386,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
         <div class="row w-100 p-3 m-0 scenarioOutput">
             <div class="w-100 text-left small p-2">
-                ========== RESPONSE BODY ==========<br>Mensagem: Cadastro realizado com sucesso<br>Id: ouyFEKub0KYu0caJ<br>===================================
+                ========== RESPONSE BODY ==========<br>Mensagem: Cadastro realizado com sucesso<br>Id: RDQK9CxkpsPVBJWZ<br>===================================
             </div>
         </div>
                         </div>
@@ -396,30 +396,25 @@ font-src * data: blob: 'unsafe-inline';"/>
                             <div class="col-1 text-left small">2.</div>
                             <div class="col-8 text-left">
                                 <span data-toggle="tooltip" title="dev.serverest.stepdef.CarrinhoStepDef.euFizerUmPOSTNaAPIDeCarrinho(java.lang.String,java.lang.String)">
-                                    <a href="pages/step-scenarios/step_1172313574.html"><span class="keyword">Quando </span> eu fizer um <span class="parameter">GET</span> na API de <span class="parameter">carrinho com o id</span></a>
+                                    <a href="pages/step-scenarios/step_1172313574.html"><span class="keyword">Quando </span> eu fizer um <span class="parameter">POST</span> na API de <span class="parameter">carrinho</span></a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 332ms
+                                0m 00s 323ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
        title="passed"><span style="display:none">passed</span></i>
                             </div>
 
-        <div class="row w-100 p-3 m-0 scenarioOutput">
-            <div class="w-100 text-left small p-2">
-                ========== RESPONSE BODY ==========<br>Quantidade: 1.0<br>Carrinhos: [Carrinho(produtos=[ProdutosCarrinho(idProduto=ouyFEKub0KYu0caJ, quantidade=1, precoUnitario=498)], precoTotal=498, quantidadeTotal=1, idUsuario=psXthNIe60y5ZAjr, idCarrinho=7sstOeMGCqYBGEF7, message=null)]<br>===================================
-            </div>
-        </div>
                         </div>
 
 
                         <div class="row row_passed table-row-passed">
                             <div class="col-1 text-left small">3.</div>
                             <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="dev.serverest.stepdef.CarrinhoStepDef.aQuantidadeDeCarrinhosEncontradosSera(int)">
-                                    <a href="pages/step-scenarios/step_1518739613.html"><span class="keyword">Entao </span> a quantidade de carrinhos encontrados sera <span class="parameter">1</span></a>
+                                <span data-toggle="tooltip" title="dev.serverest.stepdef.CommonStepDef.o_status_code_sera(java.lang.Integer)">
+                                    <a href="pages/step-scenarios/step_1809871351.html"><span class="keyword">Entao </span> o status code sera <span class="parameter">201</span></a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
@@ -430,6 +425,11 @@ font-src * data: blob: 'unsafe-inline';"/>
        title="passed"><span style="display:none">passed</span></i>
                             </div>
 
+        <div class="row w-100 p-3 m-0 scenarioOutput">
+            <div class="w-100 text-left small p-2">
+                Status: 201
+            </div>
+        </div>
                         </div>
                 </li>
             </div>
@@ -448,7 +448,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                     <i>dev.serverest.stepdef.Hooks.setBearerTokenToNull()</i>
                                 </div>
                                 <div class="col-2 text-left small">
-                                    0m 00s 926ms
+                                    0m 00s 943ms
                                 </div>
                                 <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"

@@ -19,12 +19,12 @@ Funcionalidade: Cenarios de teste de usuarios
     Quando eu fizer um PUT na API de cadastro
     Entao o status code sera 200
 
-  Cenario: Achando um usuario com o id
+  Cenario: Procurando um usuario pelo ID
     Dado que eu tenho uma conta ja cadastrada
     Quando eu fizer um GET na API de cadastro com o id
     Entao a quantidade de usuarios encontrados sera 1
 
-  Cenario: Achando usuarios
+  Cenario: Procurando todos os usuarios
     Quando eu fizer um GET na API de cadastro
     Entao o status code sera 200
 

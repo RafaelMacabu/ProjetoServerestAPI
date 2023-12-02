@@ -21,47 +21,47 @@ public class UsuariosAPI {
         return RestResource.get(USUARIOS);
     }
 
-    public static Response get(String usuarioKey,String usuarioValue){
-        Map<String,String> paramMap = Map.of(usuarioKey,usuarioValue);
+    public static Response get(String usuarioKey, String usuarioValue) {
+        Map<String, String> paramMap = Map.of(usuarioKey, usuarioValue);
 
-        return RestResource.get(USUARIOS,paramMap);
+        return RestResource.get(USUARIOS, paramMap);
     }
 
     public static Response post(Usuario requestUsuario) {
         return RestResource.post(USUARIOS, requestUsuario);
     }
 
-    public static void postBearer(Usuario requestUsuario){
+    public static void postBearer(Usuario requestUsuario) {
         TokenManager.setBearerToken(getToken(requestUsuario));
     }
 
-    public static Response delete(String userId){
+    public static Response delete(String userId) {
         return RestResource.delete(USUARIOS + "/" + userId);
     }
 
-    public static Response put(Usuario requestUsuario,String userId){
-        return RestResource.put(USUARIOS + "/" + userId,requestUsuario);
+    public static Response put(Usuario requestUsuario, String userId) {
+        return RestResource.put(USUARIOS + "/" + userId, requestUsuario);
     }
 
-    public static void logRequest(Usuario request){
+    public static void logRequest(Usuario request) {
         logInfo("========== REQUEST BODY ==========");
         logInfo("Nome: " + request.getNome());
-        logInfo("Email: " +request.getEmail());
-        logInfo("Senha: " +request.getPassword());
-        logInfo("Admin: " +request.getAdministrador());
+        logInfo("Email: " + request.getEmail());
+        logInfo("Senha: " + request.getPassword());
+        logInfo("Admin: " + request.getAdministrador());
         logInfo("==================================");
     }
 
-    public static void logResponse(Usuario responseAsClass){
+    public static void logResponse(Usuario responseAsClass) {
         logInfo("========== RESPONSE BODY ==========");
         logInfo("Mensagem: " + responseAsClass.getMessage());
-        if (responseAsClass.getId() != null){
+        if (responseAsClass.getId() != null) {
             logInfo("Id: " + responseAsClass.getId());
         }
         logInfo("===================================");
     }
 
-    public static void logResponseList(Usuarios responseAsClass){
+    public static void logResponseList(Usuarios responseAsClass) {
         logInfo("========== RESPONSE BODY ==========");
         logInfo("Quantidade: " + responseAsClass.getQuantidade());
         logInfo("Usuarios: " + responseAsClass.getUsuarios());
@@ -77,22 +77,22 @@ public class UsuariosAPI {
                 build();
     }
 
-    public static Usuario generateRandomUser(){
+    public static Usuario generateRandomUser() {
         String nome = generateName();
         return Usuario.builder().
                 nome(nome).
                 password(generatePassword()).
-                email(generateEmail(nome.replace(" ",""))).
+                email(generateEmail(nome.replace(" ", ""))).
                 administrador("true").
                 build();
     }
 
-    public static Usuario generateRandomUser(Boolean admin){
+    public static Usuario generateRandomUser(Boolean admin) {
         String nome = generateName();
         return Usuario.builder().
                 nome(nome).
                 password(generatePassword()).
-                email(generateEmail(nome.replace(" ",""))).
+                email(generateEmail(nome.replace(" ", ""))).
                 administrador(admin.toString()).
                 build();
     }
@@ -104,7 +104,7 @@ public class UsuariosAPI {
                 name = usuarios.getNome();
             }
         }*/
-        try{
+        try {
             Usuario usuario = responseUsuarios.getUsuarios().
                     stream().
                     filter(e -> e.getNome().equals(usuarioNome)).
@@ -112,7 +112,7 @@ public class UsuariosAPI {
                     .get(0);
             System.out.println(usuario.getId());
             Assert.assertEquals(usuario.getNome(), usuarioNome);
-        }catch (IndexOutOfBoundsException exception){
+        } catch (IndexOutOfBoundsException exception) {
             System.out.println("Usuário não encontrado");
             Assert.fail();
         }

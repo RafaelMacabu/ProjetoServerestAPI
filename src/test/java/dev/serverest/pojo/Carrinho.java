@@ -16,6 +16,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
+@ToString
 public class Carrinho {
     @JsonProperty("produtos")
     private List<ProdutosCarrinho> produtos;

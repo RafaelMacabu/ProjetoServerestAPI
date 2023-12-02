@@ -2,10 +2,7 @@ package dev.serverest.api.applicationAPI;
 
 import dev.serverest.api.RestResource;
 import dev.serverest.api.TokenManager;
-import dev.serverest.pojo.Carrinho;
-import dev.serverest.pojo.Produto;
-import dev.serverest.pojo.ProdutosCarrinho;
-import dev.serverest.pojo.Usuario;
+import dev.serverest.pojo.*;
 import dev.serverest.services.ProdutosService;
 import io.restassured.response.Response;
 
@@ -16,6 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 import static dev.serverest.api.Route.CARRINHOS;
+import static dev.serverest.utils.LogUtils.logInfo;
 
 public class CarrinhoAPI extends TokenManager {
 
@@ -53,11 +51,14 @@ public class CarrinhoAPI extends TokenManager {
                     quantidade(1).
                     build());
         }
-        /*list.add(ProdutosCarrinho.builder().
-                idProduto(ProdutosService.getIdProduto().get().get(0)).
-                quantidade(1).
-                build());*/
         return list;
+    }
+
+    public static void logResponseList(Carrinhos responseAsClass) {
+        logInfo("========== RESPONSE BODY ==========");
+        logInfo("Quantidade: " + responseAsClass.getQuantidade());
+        logInfo("Carrinhos: " + responseAsClass.getCarrinhos());
+        logInfo("===================================");
     }
 
 }

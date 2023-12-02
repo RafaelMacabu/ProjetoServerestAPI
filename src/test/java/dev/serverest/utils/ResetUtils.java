@@ -12,11 +12,11 @@ import java.util.ArrayList;
 
 public class ResetUtils {
     public static void reset(){
-        if (CarrinhoService.getResponseAsClass() != null) {
+        if (CarrinhoService.getResponseAsClass() != null && TokenManager.getBearerToken() != null) {
             CarrinhoAPI.delete();
         }
 
-        if (ProdutosService.getResponseAsClass() != null) {
+        if (ProdutosService.getResponseAsClass() != null && TokenManager.getBearerToken() != null) {
             for (String produto: ProdutosService.getIdProduto()) {
                 ProdutosAPI.delete(produto);
             }
@@ -24,6 +24,7 @@ public class ResetUtils {
 
         if (UsuarioService.getResponseAsClass() != null) {
             UsuariosAPI.delete(UsuarioService.getIdUsuario());
+            UsuarioService.setResponseAsClass(null);
         }
 
         if (ProdutosService.getResponseAsClass() != null) {

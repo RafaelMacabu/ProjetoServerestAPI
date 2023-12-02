@@ -94,4 +94,8 @@ public class UsuarioService extends BaseService {
     public static void setIdUsuario(String id) {
         idUsuario.set(id);
     }
+
+    public static void setResponseAsClass(Usuario response) {
+        responseAsClass.set(response);
+    }
 }

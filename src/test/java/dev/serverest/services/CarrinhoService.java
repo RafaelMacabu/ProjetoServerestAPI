@@ -10,12 +10,11 @@ import lombok.Getter;
 import java.util.ArrayList;
 
 import static dev.serverest.api.applicationAPI.ProdutosAPI.generateRandomProduct;
+import static dev.serverest.api.applicationAPI.CarrinhoAPI.logResponseList;
 import static dev.serverest.api.applicationAPI.UsuariosAPI.generateRandomUser;
-import static dev.serverest.api.applicationAPI.UsuariosAPI.logResponse;
-import static dev.serverest.services.ProdutosService.idProduto;
+import static dev.serverest.services.Assertions.assertEquals;
 import static dev.serverest.services.ProdutosService.requestProduto;
-import static dev.serverest.services.UsuarioService.idUsuario;
-import static dev.serverest.services.UsuarioService.requestUsuario;
+import static dev.serverest.utils.LogUtils.logInfo;
 
 public class CarrinhoService extends BaseService {
     @Getter
@@ -45,6 +44,23 @@ public class CarrinhoService extends BaseService {
     public void cadastrarCarrinho(){
         response.set(CarrinhoAPI.post(CarrinhoAPI.carrinhoBuilder()));
         responseAsClass.set(response.get().as(Carrinho.class));
+    }
+
+    public void acharCarrinhos() {
+        response.set(CarrinhoAPI.get());
+        responseAsClassList.set(response.get().as(Carrinhos.class));
+        logResponseList(responseAsClassList.get());
+    }
+
+    public void acharCarrinhoPorID() {
+        response.set(CarrinhoAPI.get("_id", responseAsClass.get().getIdCarrinho()));
+        responseAsClassList.set(response.get().as(Carrinhos.class));
+        logResponseList(responseAsClassList.get());
+    }
+
+    public void assertQuantidade(Integer quantidade) {
+        assertEquals(responseAsClassList.get().getQuantidade(), quantidade);
+        logInfo("Quantidade de carrinhos encontrados: " + responseAsClassList.get().getQuantidade());
     }
 
     public static Carrinho getResponseAsClass() {
