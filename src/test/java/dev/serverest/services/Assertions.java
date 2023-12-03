@@ -1,6 +1,5 @@
 package dev.serverest.services;
 
-import io.restassured.response.Response;
 import org.testng.Assert;
 
 public class Assertions {

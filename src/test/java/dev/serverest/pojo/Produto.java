@@ -5,8 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 import lombok.extern.jackson.Jacksonized;
 
-import java.nio.file.Path;
-
 @JsonInclude(JsonInclude.Include.NON_DEFAULT)
 @Getter
 @Setter

@@ -7,10 +7,7 @@ import dev.serverest.pojo.Usuario;
 import dev.serverest.services.BaseService;
 import dev.serverest.services.UsuarioService;
 import io.restassured.response.Response;
-import lombok.Getter;
-import lombok.Setter;
 
-import static dev.serverest.api.applicationAPI.UsuariosAPI.usuariosBuilder;
 import static dev.serverest.services.UsuarioService.responseAsClass;
 
 public class TokenManager extends BaseService {

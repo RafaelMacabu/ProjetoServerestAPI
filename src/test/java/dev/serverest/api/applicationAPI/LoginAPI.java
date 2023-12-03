@@ -5,6 +5,7 @@ import dev.serverest.pojo.Login;
 import io.restassured.response.Response;
 
 import static dev.serverest.api.Route.LOGIN;
+import static dev.serverest.utils.LogUtils.logInfo;
 
 public class LoginAPI {
 
@@ -17,6 +18,15 @@ public class LoginAPI {
                 email(email).
                 password(password).
                 build();
+    }
+
+    public static void logResponse(Login responseAsClass) {
+        logInfo("========== RESPONSE BODY ==========");
+        logInfo("Mensagem: " + responseAsClass.getMessage());
+        if (responseAsClass.getAuthorization() != null) {
+            logInfo("Bearer: " + responseAsClass.getAuthorization());
+        }
+        logInfo("===================================");
     }
 
 }

@@ -4,8 +4,6 @@ import dev.serverest.services.UsuarioService;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
-import org.testng.Assert;
-
 
 public class UsuarioStepDef {
     private UsuarioService service = new UsuarioService();

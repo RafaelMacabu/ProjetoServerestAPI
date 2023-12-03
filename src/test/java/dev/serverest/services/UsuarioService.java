@@ -5,9 +5,6 @@ import dev.serverest.api.applicationAPI.UsuariosAPI;
 import dev.serverest.pojo.Login;
 import dev.serverest.pojo.Usuario;
 import dev.serverest.pojo.Usuarios;
-import io.restassured.response.Response;
-import lombok.Getter;
-import lombok.Setter;
 
 import static dev.serverest.api.applicationAPI.UsuariosAPI.*;
 import static dev.serverest.services.Assertions.assertEquals;
@@ -16,6 +13,7 @@ import static dev.serverest.utils.LogUtils.logInfo;
 
 public class UsuarioService extends BaseService {
     public static ThreadLocal<Usuario> responseAsClass = new ThreadLocal<>();
+    public static ThreadLocal<Login> responseAsClassLogin = new ThreadLocal<>();
     protected static ThreadLocal<Usuario> requestUsuario = new ThreadLocal<>();
     protected static ThreadLocal<String> idUsuario = new ThreadLocal<>();
     private static ThreadLocal<Login> requestLogin = new ThreadLocal<>();
@@ -68,6 +66,9 @@ public class UsuarioService extends BaseService {
     public void realizarLogin() {
         requestLogin.set(LoginAPI.loginBuilder(requestUsuario.get().getEmail(), requestUsuario.get().getPassword()));
         response.set(LoginAPI.post(requestLogin.get()));
+        responseAsClassLogin.set(response.get().as(Login.class));
+
+        LoginAPI.logResponse(responseAsClassLogin.get());
     }
 
     public void assertQuantidade(Integer quantidade) {

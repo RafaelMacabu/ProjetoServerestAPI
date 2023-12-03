@@ -78,9 +78,9 @@ font-src * data: blob: 'unsafe-inline';"/>
   "data": {
     "labels": [
       "dev.serverest.stepdef.Hooks.before(io.cucumber.java.Scenario)",
-      "que quero adicionar um produto a um carrinho",
-      "eu fizer um POST na API de carrinho",
-      "o status code sera 201",
+      "que eu tenho uma conta ja cadastrada",
+      "eu fizer um GET na API de cadastro com o id",
+      "a quantidade de usuarios encontrados sera 1",
       "dev.serverest.stepdef.Hooks.setBearerTokenToNull()",
       "dev.serverest.stepdef.Hooks.after()"
     ],
@@ -88,7 +88,7 @@ font-src * data: blob: 'unsafe-inline';"/>
       {
         "data": [
           0,
-          7,
+          0,
           0,
           0,
           0,
@@ -168,7 +168,7 @@ font-src * data: blob: 'unsafe-inline';"/>
         {
           "ticks": {
             "min": 0,
-            "stepSize": 7,
+            "stepSize": 0,
             "display": true
           },
           "stacked": true,
@@ -271,14 +271,14 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <a class="nav-link " href="pages/feature-summary.html">All Features</a>
                     </li>
             </ul>
-            <span class="text-light">2023-12-02 04:12:48</span>
+            <span class="text-light">2023-12-03 03:01:56</span>
         </div>
     </nav>
     <main role="main" class="container">
         <div class="cluecumber-template">
             <div class="pb-2 mt-4 mb-2 border-bottom">
-                        <h5><a href="pages/feature-scenarios/feature_0.html">Cenarios de teste de carrinho</a></h5>
-                    <h3>Cadastrando um produto no carrinho</h3>
+                        <h5><a href="pages/feature-scenarios/feature_3.html">Cenarios de teste de usuarios</a></h5>
+                    <h3>Procurando um usuario pelo ID</h3>
             </div>
 
     <div class="row" id="scenario-detail">
@@ -296,13 +296,13 @@ font-src * data: blob: 'unsafe-inline';"/>
         <div class="card h-100">
                 <div class="card-header">Scenario Info</div>
             <div class="card-body">
-                <li class="list-group-item">Started on:<br>2023-12-02 04:12:34</li>
-                <li class="list-group-item">Ended on:<br>2023-12-02 04:12:42</li>
-            <li class="list-group-item">Test Runtime:<br>0m 08s 496ms</li>
+                <li class="list-group-item">Started on:<br>2023-12-03 03:01:47</li>
+                <li class="list-group-item">Ended on:<br>2023-12-03 03:01:48</li>
+            <li class="list-group-item">Test Runtime:<br>0m 00s 975ms</li>
             <li class="list-group-item">
                     <a href="pages/tag-scenarios/tag_Test.html">@Test</a>,
 
-                    <a href="pages/tag-scenarios/tag_TestCarrinho.html">@TestCarrinho</a>            </li>
+                    <a href="pages/tag-scenarios/tag_TesteUsuarios.html">@TesteUsuarios</a>            </li>
             </div>
         </div>
     </div>
@@ -372,12 +372,12 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-1 text-left small">1.</div>
                             <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="dev.serverest.stepdef.CarrinhoStepDef.queQueroAdicionarUmProdutoAUmCarrinho()">
-                                    <a href="pages/step-scenarios/step_01357617111.html"><span class="keyword">Dado </span> que quero adicionar um produto a um carrinho</a>
+                                <span data-toggle="tooltip" title="dev.serverest.stepdef.UsuarioStepDef.tenho_Uma_Conta_Ja_Cadastrada()">
+                                    <a href="pages/step-scenarios/step_1050598309.html"><span class="keyword">Dado </span> que eu tenho uma conta ja cadastrada</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 07s 228ms
+                                0m 00s 343ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -386,7 +386,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
         <div class="row w-100 p-3 m-0 scenarioOutput">
             <div class="w-100 text-left small p-2">
-                ========== RESPONSE BODY ==========<br>Mensagem: Cadastro realizado com sucesso<br>Id: RDQK9CxkpsPVBJWZ<br>===================================
+                ========== REQUEST BODY ==========<br>Nome: César Ramires<br>Email: CésarRamires930@qa.com<br>Senha: 8s2k0r8w<br>Admin: true<br>==================================<br>========== RESPONSE BODY ==========<br>Mensagem: Cadastro realizado com sucesso<br>Id: KqFTnJBuFDZrSVJp<br>===================================
             </div>
         </div>
                         </div>
@@ -395,26 +395,31 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-1 text-left small">2.</div>
                             <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="dev.serverest.stepdef.CarrinhoStepDef.euFizerUmPOSTNaAPIDeCarrinho(java.lang.String,java.lang.String)">
-                                    <a href="pages/step-scenarios/step_1172313574.html"><span class="keyword">Quando </span> eu fizer um <span class="parameter">POST</span> na API de <span class="parameter">carrinho</span></a>
+                                <span data-toggle="tooltip" title="dev.serverest.stepdef.UsuarioStepDef.eu_fizer_um_POST_na_API_de_cadastro(java.lang.String,java.lang.String)">
+                                    <a href="pages/step-scenarios/step_0428145114.html"><span class="keyword">Quando </span> eu fizer um <span class="parameter">GET</span> na API de <span class="parameter">cadastro com o id</span></a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 323ms
+                                0m 00s 322ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
        title="passed"><span style="display:none">passed</span></i>
                             </div>
 
+        <div class="row w-100 p-3 m-0 scenarioOutput">
+            <div class="w-100 text-left small p-2">
+                ========== RESPONSE BODY ==========<br>Quantidade: 1<br>Usuarios: [Usuario(email=CésarRamires930@qa.com, password=8s2k0r8w, nome=César Ramires, administrador=true, id=KqFTnJBuFDZrSVJp, message=null)]<br>===================================
+            </div>
+        </div>
                         </div>
 
 
                         <div class="row row_passed table-row-passed">
                             <div class="col-1 text-left small">3.</div>
                             <div class="col-8 text-left">
-                                <span data-toggle="tooltip" title="dev.serverest.stepdef.CommonStepDef.o_status_code_sera(java.lang.Integer)">
-                                    <a href="pages/step-scenarios/step_1809871351.html"><span class="keyword">Entao </span> o status code sera <span class="parameter">201</span></a>
+                                <span data-toggle="tooltip" title="dev.serverest.stepdef.UsuarioStepDef.a_Quantidade_De_Usuarios_Achados_Sera(int)">
+                                    <a href="pages/step-scenarios/step_1134948383.html"><span class="keyword">Entao </span> a quantidade de usuarios encontrados sera <span class="parameter">1</span></a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
@@ -427,7 +432,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
         <div class="row w-100 p-3 m-0 scenarioOutput">
             <div class="w-100 text-left small p-2">
-                Status: 201
+                Quantidade de usuarios encontrados: 1
             </div>
         </div>
                         </div>
@@ -448,7 +453,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                     <i>dev.serverest.stepdef.Hooks.setBearerTokenToNull()</i>
                                 </div>
                                 <div class="col-2 text-left small">
-                                    0m 00s 943ms
+                                    0m 00s 308ms
                                 </div>
                                 <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -479,7 +484,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span>Cluecumber Report Plugin version 2.3.4 - Report generated on 2023-12-02 04:12:48.</span>
+        <span>Cluecumber Report Plugin version 2.3.4 - Report generated on 2023-12-03 03:01:56.</span>
     </div>
 </footer>    </body>
     </html>

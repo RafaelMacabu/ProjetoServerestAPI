@@ -7,8 +7,6 @@ import dev.serverest.api.applicationAPI.UsuariosAPI;
 import dev.serverest.pojo.*;
 import lombok.Getter;
 
-import java.util.ArrayList;
-
 import static dev.serverest.api.applicationAPI.ProdutosAPI.generateRandomProduct;
 import static dev.serverest.api.applicationAPI.CarrinhoAPI.logResponseList;
 import static dev.serverest.api.applicationAPI.UsuariosAPI.generateRandomUser;
@@ -37,13 +35,15 @@ public class CarrinhoService extends BaseService {
 
         ProdutosService.getIdProduto().add(ProdutosService.getResponseAsClass().getId());
 
-        ProdutosAPI.logResponse(ProdutosService.getResponseAsClass());
+        ProdutosAPI.logRequest(requestProduto.get());
         return this;
     }
 
     public void cadastrarCarrinho(){
         response.set(CarrinhoAPI.post(CarrinhoAPI.carrinhoBuilder()));
         responseAsClass.set(response.get().as(Carrinho.class));
+
+        CarrinhoAPI.logResponse(responseAsClass.get());
     }
 
     public void acharCarrinhos() {

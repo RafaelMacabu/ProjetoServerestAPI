@@ -5,7 +5,6 @@ import dev.serverest.api.TokenManager;
 import dev.serverest.pojo.Produto;
 import dev.serverest.pojo.Produtos;
 import dev.serverest.pojo.Usuario;
-import dev.serverest.pojo.Usuarios;
 import io.restassured.response.Response;
 import org.testng.Assert;
 
@@ -91,7 +90,7 @@ public class ProdutosAPI{
     public static void logResponseList(Produtos responseAsClass) {
         logInfo("========== RESPONSE BODY ==========");
         logInfo("Quantidade: " + responseAsClass.getQuantidade());
-        logInfo("Produtos: " + responseAsClass.getProdutos());
+        logInfo("Produtos: " + responseAsClass.getProdutos().get(0));
         logInfo("===================================");
     }
 
