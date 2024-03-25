@@ -27,6 +27,8 @@ public class ScenarioUtils {
     }
 
     public static void addText(String text) {
-        get().log(text);
+        if(get() != null){
+            get().log(text);
+        }
     }
 }
